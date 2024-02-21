@@ -8,6 +8,11 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,13 @@ import { CardModule } from 'primeng/card';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CardModule
+    CardModule,
+    InputTextModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    AvatarGroupModule,
+    AvatarModule
+
   ],
   providers: [
     provideClientHydration()

@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="flex justify-content-center align-items-center">
+    <div class="flex-row">
+        <p-avatar image="https://i.imgur.com/8bJCn4e.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
+    </div>
+    <div class="flex-row ">
+        <h2>Training ++</h2>
+        <h5>CEB Training Management System</h5>
+    </div>
+</div>
+
+
+
+<form [formGroup]="loginForm">
+
+    <p-card header="Login" [style]="{width:'360px'}">
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="text" pInputText formControlName="email" class="w-full" name="email"
+                placeholder="Type your email" />
+            <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+                <div *ngIf="email.errors?.['required']"> Email is required.</div>
+                <div *ngIf="email.errors?.['email']"> Email is not valid.</div>
+            </small>
+        </div>
+        <div class="field">
+            <label for="password">Password</label>
+            <input type="password" pInputText formControlName="password" class="w-full" name="password"
+                placeholder="Type your password" />
+            <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+                <div *ngIf="password.errors?.['required']"> Password is required.</div>
+            </small>
+        </div>
+        <p-button label="SIGN IN" styleClass="w-full" [disabled]="loginForm.invalid"></p-button>
+        <div class="mt-2"></div>
+        Forgot Password? <a routerLink="/register">Reset Password</a>
+    </p-card>
+
+</form>
