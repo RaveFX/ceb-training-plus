@@ -13,6 +13,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { SidebarModule } from 'primeng/sidebar';
+
+
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     LoginComponent,
     RegisterComponent,
     HomeComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     ReactiveFormsModule,
     ButtonModule,
     AvatarGroupModule,
-    AvatarModule
+    AvatarModule,
+    SidebarModule
 
   ],
   providers: [
