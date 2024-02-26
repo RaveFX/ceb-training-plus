@@ -16,20 +16,27 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'home',
-    component: HomeComponent
-  },
- 
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'layout',
-    component: LayoutComponent
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+    ]
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
