@@ -5,6 +5,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 
+
 const routes: Routes = [
   {
     path: 'login',
@@ -18,6 +19,7 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
+ 
   {
     path: '',
     redirectTo: 'home',
