@@ -4,6 +4,10 @@
 @import "primeng/resources/primeng.min.css";
 @import "primeflex/primeflex.css";
 
+body {
+    margin: 0;
+}
+
 html, body {
     height: 100%;
     margin: 0;
