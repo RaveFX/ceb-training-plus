@@ -15,6 +15,10 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { AvatarModule } from 'primeng/avatar';
 import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { WorkbenchComponent } from './pages/workbench/workbench.component';
+import { ToastModule } from 'primeng/toast';
+import { HttpClientModule } from '@angular/common/http';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,8 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     HomeComponent,
     LayoutComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    WorkbenchComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,9 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     ButtonModule,
     AvatarGroupModule,
     AvatarModule,
-
+    ToastModule,
+    HttpClientModule,
+    TableModule
   ],
   providers: [
     provideClientHydration()

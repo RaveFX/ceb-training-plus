@@ -4,7 +4,16 @@
 @import "primeng/resources/primeng.min.css";
 @import "primeflex/primeflex.css";
 
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  --yellow: #FFD400;
+  --brown: #720F11;
+  --red: #FF4C3B;
+  --darkAsh: #4A4947;
+  --primary-color: #4A4947;
 }
