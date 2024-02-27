@@ -10,11 +10,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { AvatarGroupModule } from 'primeng/avatargroup';
-import { SidebarModule } from 'primeng/sidebar';
 import { LayoutComponent } from './layout/layout.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import { AvatarModule } from 'primeng/avatar';
 import { HeaderComponent } from './layout/header/header.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import { HeaderComponent } from './layout/header/header.component';
     RegisterComponent,
     HomeComponent,
     LayoutComponent,
-    HeaderComponent
-  
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,6 @@ import { HeaderComponent } from './layout/header/header.component';
     ButtonModule,
     AvatarGroupModule,
     AvatarModule,
-    SidebarModule
 
   ],
   providers: [
