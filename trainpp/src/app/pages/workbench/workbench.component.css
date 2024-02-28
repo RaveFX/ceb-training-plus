@@ -1,17 +1,10 @@
-/* Decrease font size for table cells */
-.p-datatable .p-datatable-tbody > tr > td {
-    font-size:  12px;
-  }
-  
-  /* Decrease font size for table headers */
-  .p-datatable .p-datatable-thead > tr > th {
-    font-size:  14px;
-  }
-  
-  /* Decrease button size */
-  .p-button {
-    font-size:  12px;
-    padding:  5px  20px;
-    background-color: var(--darkAsh);
-  }
-  
+/* Decrease button size */
+.p-button {
+  font-size: 12px;
+  padding: 5px 20px;
+  background-color: var(--darkAsh);
+}
+
+* {
+  font-size: small;
+}
