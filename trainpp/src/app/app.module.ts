@@ -15,6 +15,9 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { AvatarModule } from 'primeng/avatar';
 import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { MenuModule } from 'primeng/menu';
+import { PanelMenuModule } from 'primeng/panelmenu';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     ButtonModule,
     AvatarGroupModule,
     AvatarModule,
+    MenuModule,
+    PanelMenuModule
+
 
   ],
   providers: [
