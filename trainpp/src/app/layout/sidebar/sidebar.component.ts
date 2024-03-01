@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { sidebarData } from './nav-data';
+import { ISidebarData } from './helper';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,15 +10,19 @@ import { sidebarData } from './nav-data';
 export class SidebarComponent {
   collapsed = false;
   navData = sidebarData;
+  multiple: boolean = false;
 
-  toggleCollapse(): void {
-    this.collapsed = !this.collapsed;
-  
+
+  handleClick(item: ISidebarData): void {
+    if (!this.multiple){
+      for(let modelItem of this.navData){
+        if(item !== modelItem && modelItem.expanded){
+          modelItem.expanded = false;
+        }
+      }
+    }
+    item.expanded = !item.expanded
+
 }
 
-closeSidenav(): void {
-    this.collapsed = false;
-
-}
- 
 }

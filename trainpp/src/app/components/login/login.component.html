@@ -32,7 +32,8 @@
                 </small>
             </div>
             <p class="text-right text-xs mb-5">Forgot Password? <a routerLink="/register">Reset</a></p>
-            <p-button label="SIGN IN" styleClass="w-full bg-yellow-400 border-none text-color " [disabled]="loginForm.invalid"></p-button>
+            <!-- <p-button label="SIGN IN" styleClass="w-full bg-yellow-400 border-none text-color " [disabled]="loginForm.invalid" routerLink="/layout/home"></p-button> -->
+            <p-button label="SIGN IN" styleClass="w-full bg-yellow-400 border-none text-color " [disabled]="false" routerLink="/layout/home"></p-button>
             <p class="text-center text-xs">By signing in, you agree to our <a routerLink="/register">Privacy Policy</a></p>
         </p-card>
     

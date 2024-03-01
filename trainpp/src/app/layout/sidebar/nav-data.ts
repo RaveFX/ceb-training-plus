@@ -1,17 +1,45 @@
-export const sidebarData = [
+import { ISidebarData } from "./helper";
+
+export const sidebarData: ISidebarData[] = [
     {
         label: 'Home',
-        icon: 'pi pi-fw pi-home',
+        icon: 'heroHome',
         routeLink: '/home'
     },
     {
-        label: 'Register',
-        icon: 'pi pi-fw pi-user-plus',
-        routeLink: '/register'
+        label: 'Dashboard',
+        icon: 'heroCog',
+        routeLink: '/login'
+    },
+
+    {
+        label: 'Scorecard',
+        icon: 'heroClipboard',
+        routeLink: '/login'
     },
     {
-        label: 'Login',
-        icon: 'pi pi-fw pi-sign-in',
+        label: 'Workbench',
+        icon: 'heroBriefcase',
+        routeLink: '/login',
+        items: [
+            {
+                routeLink: 'workbench/sub1',
+                label: 'SubOne',
+                icon: 'heroBriefcase',
+
+            },
+
+            {
+                routeLink: 'workbench/sub2',
+                label: 'SubTwo',
+                icon: 'heroBriefcase',
+
+            }
+        ]
+    },
+    {
+        label: 'Canvas',
+        icon: 'heroPencilSquare',
         routeLink: '/login'
     }
 

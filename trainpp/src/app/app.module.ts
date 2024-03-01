@@ -17,7 +17,9 @@ import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { MenuModule } from 'primeng/menu';
 import { PanelMenuModule } from 'primeng/panelmenu';
-
+import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare } from '@ng-icons/heroicons/outline';
+import { NgIconsModule } from '@ng-icons/core';
+import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     HomeComponent,
     LayoutComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    SublevelMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     AvatarGroupModule,
     AvatarModule,
     MenuModule,
-    PanelMenuModule
+    PanelMenuModule,
+    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare})
 
 
   ],
