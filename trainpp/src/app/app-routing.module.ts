@@ -5,7 +5,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { WorkbenchComponent } from './pages/workbench/workbench.component';
-
+import { ProgramListComponent } from './pages/program-list/program-list.component';
 
 const routes: Routes = [
   {
@@ -37,6 +37,10 @@ const routes: Routes = [
       {
         path: 'workbench',
         component: WorkbenchComponent
+      },
+      {
+        path: 'programlist',
+        component: ProgramListComponent
       }
     ]
   }
