@@ -15,6 +15,12 @@ import { LayoutComponent } from './layout/layout.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import { AvatarModule } from 'primeng/avatar';
 import { HeaderComponent } from './layout/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastModule } from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MessageService } from 'primeng/api';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +30,7 @@ import { HeaderComponent } from './layout/header/header.component';
     HomeComponent,
     LayoutComponent,
     HeaderComponent
-  
+
   ],
   imports: [
     BrowserModule,
@@ -37,11 +43,14 @@ import { HeaderComponent } from './layout/header/header.component';
     ButtonModule,
     AvatarGroupModule,
     AvatarModule,
-    SidebarModule
+    SidebarModule,
+    HttpClientModule,
+    ToastModule,
+    BrowserAnimationsModule
 
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(), MessageService
   ],
   bootstrap: [AppComponent]
 })
