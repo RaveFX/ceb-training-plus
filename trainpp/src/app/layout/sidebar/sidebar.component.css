@@ -1,54 +1,60 @@
 .sidenav {
-  background: none;
-  color: #000000;
-  transition: all 0.5s ease;
-  top: 0;
-  width: full;
+  background: #263238;
+  transition: all .5s ease;
+  position: fixed;
   z-index: 1;
+  top: 0;
+  width: 5rem;
   height: 100vh;
-  box-shadow: 0.025rem 0 0.05rem 0 #8690a3;
+  box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+}
 
-  .logo-container {
-    display: flex;
-    align-items: center;
-    padding: 0.938rem 0.938rem 0.983rem;
-    width: 100%;
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:  0.938rem 0.938rem 0 0.938rem;
+  width: 100%;
 
-    .logo {
-      background: #e8b4b4;
-      text-align: center;
-      width: 3rem;
-      min-width: 3rem;
-      border-radius: 0.313rem;
-      padding: 0.313rem;
+  .logo {
+    background: #fff;
+    text-align: center;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 0.313rem;
+    padding: 0.313rem;
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+  }
+
+  .logo-text {
+    margin-left:  1.5rem;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .btn-close {
+    margin: auto;
+    cursor: pointer;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+
+    .closeIcon {
+      color: #fff;
       font-size: 24px;
-      font-weight: 900;
-      cursor: pointer;
-      border: none;
     }
-
-    .logo-text {
-      margin-left: 1.5rem;
-      font-size: 24px;
-      font-weight: 700;
-      color: #000000;
-    }
-
-    /* .btn-close {
-      margin-left: auto;
-      cursor: pointer;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      background-color: transparent;
-      border: none;
-    } */
   }
 }
 
-/* .sidenav-collapsed {
-  width: 5rem;
-} */
+.sidenav-collapsed {
+  width: 16.5625rem;
+}
 
 .sidenav-nav {
   list-style: none;
@@ -68,10 +74,10 @@
       display: flex;
       align-items: center;
       height: 3rem;
-      color: #000000;
+      color: #f3f3f3;
       text-decoration: none;
       border-radius: 0.625rem;
-      transition: all 0.3s ease;
+      transition: all .3s ease;
 
       .sidenav-link-icon {
         font-size: 22px;
@@ -80,28 +86,18 @@
         margin: 0 0.5rem;
         text-align: center;
       }
+
       .sidenav-link-text {
         margin-left: 1.5rem;
-        color: #000000;
-        
       }
     }
   }
-}
 
-.sidenav-nav-item:hover {
-  .sidenav-nav-link {
-    background-color: #d6c0c0;
-    color: #ffffff;
-  }
-}
+  .sidenav-nav-item:hover {
+    .sidenav-nav-link {
+      background-color: #fff;
+      color: #000;
 
-
-.active{
-  background-color: #fff;
-
-  .sidenav-link-icon,
-  .sidenav-link-text{
-    color:#000000
+    }
   }
 }

@@ -1,55 +1,17 @@
-<div class="sidenav">
-    <div class="mx-2 logo-container ">
-        <div class="flex align-items-center gap-2">
-            <img src="https://i.imgur.com/8bJCn4e.png" class="w-3rem border-circle" />
-            <div class="flex-column">
-                <h3 class="m-0 text-sm">Training++</h3>
-                <span class="m-0 text-xs">CEB Training Management System</span>
-            </div>
-            <!-- <button class="logo" >A</button>
-        <div class="logo-text">Angular</div> -->
-        </div>
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : '' ">
+    <div class="logo-container">
+        <button class="logo" (click)="toggleCollapse()">A</button>
+        <div class="logo-text" *ngIf = "collapsed">Angular</div>
+        <button class="btn-close" *ngIf = "collapsed" (click)="closeSidenav()">
+            <ng-icon name="heroXCircle" class="closeIcon"></ng-icon>
+        </button>
     </div>
-    <!-- <ul class="sidenav-nav">
-        <li class="sidenav-nav-item" *ngFor="let data of navData">
-            <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active"
-                [routerLinkActiveOptions]="{exact: true}">
-                <ng-icon class="sidenav-link-icon" [name]="data.icon ? data.icon : ''"></ng-icon>
-                <span class="sidenav-link-text">{{data.label}}</span>
-            </a>
-
-        </li>
-
-    </ul> -->
     <ul class="sidenav-nav">
         <li class="sidenav-nav-item" *ngFor="let data of navData">
-            <a class="sidenav-nav-link" (click)="handleClick(data)"
-            *ngIf="data.items && data.items.length > 0">
+            <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]">
                 <ng-icon class="sidenav-link-icon" [name]="data.icon ? data.icon : ''"></ng-icon>
-                <span class="sidenav-link-text">{{data.label}}</span>
-                <i *ngIf="data.items && collapsed" class="menu-collapse-icon"
-                    [ngClass]="!data.expanded ? 'pi pi-chevron-right' : 'pi pi-chevron-down'"></i>
+                <span class="sidenav-link-text" *ngIf="collapsed">{{ data.label }}</span>
             </a>
-
-            <a class="sidenav-nav-link" 
-                *ngIf="!data.items || (data.items && data.items.length === 0)"
-                [routerLink]="[data.routeLink]" 
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{exact: true}">
-                <ng-icon class="sidenav-link-icon" [name]="data.icon ? data.icon : ''"></ng-icon>
-                <span class="sidenav-link-text">
-                    {{data.label}}
-                </span>
-            </a>
-            <div *ngIf="collapsed && data.items && data.items.length > 0" >
-                <app-sublevel-menu
-               
-                [multiple]="multiple"
-                [expanded]="data.expanded"
-                ></app-sublevel-menu>
-            </div>
-
         </li>
-
     </ul>
 </div>

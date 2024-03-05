@@ -1,0 +1,9 @@
+.size-lg {
+    width:16.5625rem;
+    transition: all .3s ease;
+}
+
+.size-sm {
+    width: 5rem;
+    transition: all .3s ease;
+}

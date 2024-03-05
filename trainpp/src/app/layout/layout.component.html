@@ -1,6 +1,6 @@
 <div class="grid grid-nogutter">
-    <div class="col-fixed" style="width:300px">
-        <app-sidebar></app-sidebar>
+    <div class="col-fixed" [ngClass] = "getSideNavClass()">
+        <app-sidebar (onToggleSideNav)="onToggleSideNav($event)"></app-sidebar>
     </div>
     <div class="col">
         <div class="grid grid-nogutter">
