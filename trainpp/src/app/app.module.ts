@@ -46,7 +46,8 @@ import { TableModule } from 'primeng/table';
     AvatarModule,
     HttpClientModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TableModule
 
   ],
   providers: [
