@@ -14,10 +14,12 @@ import { LayoutComponent } from './layout/layout.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import { AvatarModule } from 'primeng/avatar';
 import { HeaderComponent } from './layout/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastModule } from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MessageService } from 'primeng/api';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { WorkbenchComponent } from './pages/workbench/workbench.component';
-import { ToastModule } from 'primeng/toast';
-import { HttpClientModule } from '@angular/common/http';
 import { TableModule } from 'primeng/table';
 
 @NgModule({
@@ -29,7 +31,7 @@ import { TableModule } from 'primeng/table';
     LayoutComponent,
     HeaderComponent,
     SidebarComponent,
-    WorkbenchComponent
+  WorkbenchComponent
   ],
   imports: [
     BrowserModule,
@@ -42,12 +44,13 @@ import { TableModule } from 'primeng/table';
     ButtonModule,
     AvatarGroupModule,
     AvatarModule,
-    ToastModule,
     HttpClientModule,
-    TableModule
+    ToastModule,
+    BrowserAnimationsModule
+
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(), MessageService
   ],
   bootstrap: [AppComponent]
 })
