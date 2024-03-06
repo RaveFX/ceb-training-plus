@@ -20,7 +20,27 @@ export const sidebarData: ISidebarData[] = [
     {
         label: 'Workbench',
         icon: 'heroBriefcase',
-        routeLink: '/login',
+        // routeLink: '/login',
+        items: [
+            {
+                routeLink: 'workbench/sub1',
+                label: 'SubOne',
+                icon: 'heroBriefcase',
+
+            },
+
+            {
+                routeLink: 'workbench/sub2',
+                label: 'SubTwo',
+                icon: 'heroBriefcase',
+
+            }
+        ]
+    },
+    {
+        label: 'Programs',
+        icon: 'heroBriefcase',
+        // routeLink: '/login',
         items: [
             {
                 routeLink: 'workbench/sub1',

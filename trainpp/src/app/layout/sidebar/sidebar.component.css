@@ -1,19 +1,40 @@
 .sidenav {
-  background: #263238;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
   transition: all .5s ease;
   position: fixed;
   z-index: 1;
   top: 0;
   width: 5rem;
   height: 100vh;
-  box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+  box-shadow: 0.003rem 0 0.3rem 0 #8690a3;
+}
+
+.userRole {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5rem 0.938rem 0.5rem;
+
+  .userRole-icon{
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  .userRole-text {
+    font-size: medium;
+    font-weight: 500;
+    margin-left: 1rem;
+  }
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:  0.938rem 0.938rem 0 0.938rem;
+  padding: 0.938rem 0.938rem 0 0.938rem;
   width: 100%;
 
   .logo {
@@ -21,19 +42,33 @@
     text-align: center;
     width: 3rem;
     min-width: 3rem;
-    border-radius: 0.313rem;
-    padding: 0.313rem;
-    font-size: 24px;
-    font-weight: 900;
+    border-radius: 100%;
+    /* padding: 0.313rem; */
+    /* font-size: 24px; */
+    /* font-weight: 900; */
     cursor: pointer;
     border: none;
   }
 
+  .logoImg {
+    width: 3rem;
+  }
+
   .logo-text {
-    margin-left:  1.5rem;
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
+    margin-left: 1.5rem;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+
+    .logo-text-main {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .logo-text-sub {
+      font-size: 12px;
+      font-weight: 400;
+    }
   }
 
   .btn-close {
@@ -46,14 +81,14 @@
     border: none;
 
     .closeIcon {
-      color: #fff;
+      color: #000;
       font-size: 24px;
     }
   }
 }
 
 .sidenav-collapsed {
-  width: 16.5625rem;
+  width: 18rem;
 }
 
 .sidenav-nav {
@@ -74,7 +109,7 @@
       display: flex;
       align-items: center;
       height: 3rem;
-      color: #f3f3f3;
+      color: #000;
       text-decoration: none;
       border-radius: 0.625rem;
       transition: all .3s ease;
@@ -91,13 +126,84 @@
         margin-left: 1.5rem;
       }
     }
+
+    .sidebar-submenu {
+      list-style: none;
+      padding: 0.938rem 0 0.938rem 0.938rem ;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: calc(100% - 3.65rem);
+      cursor: pointer;
+
+      .sidebar-sub-item {
+        width: 100%;
+        /* margin-bottom: 0.625rem; */
+
+        .sidebar-sub-navlink {
+          display: flex;
+          align-items: center;
+          height: 3rem;
+          color: #000;
+          text-decoration: none;
+          border-radius: 0.625rem;
+          transition: all .3s ease;
+
+          .sidenav-link-icon {
+            font-size: 22px;
+            width: 2rem;
+            min-width: 2rem;
+            margin: 0 0.5rem;
+            text-align: center;
+          }
+    
+          .sidenav-link-text {
+            margin-left: 1.5rem;
+          }
+        }
+      }
+
+      .sidebar-sub-item:hover {
+        .sidebar-sub-navlink {
+          background-color: #720F11;
+          color: #fff;
+    
+        }
+      }
+    }
   }
 
   .sidenav-nav-item:hover {
     .sidenav-nav-link {
-      background-color: #fff;
-      color: #000;
+      background-color: #720F11;
+      color: #fff;
 
     }
+  }
+}
+
+.userProfile {
+  margin: 0.938rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #f1e7e8;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.userDetails {
+  display:flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+
+  .userName {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .userEmail {
+    font-size: 12px;
+    font-weight: 500;
   }
 }

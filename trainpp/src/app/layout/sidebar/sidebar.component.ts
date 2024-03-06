@@ -15,9 +15,11 @@ interface SideNavToggle {
 export class SidebarComponent implements OnInit{
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
-  collapsed = false;
+  collapsed = true;
   screenWidth = 0;
   navData = sidebarData;
+  submenuVisibility: { [key: string]: boolean } = {};
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -41,4 +43,9 @@ export class SidebarComponent implements OnInit{
     this.collapsed = false;
     this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
   }
+
+  toggleSubmenu(label: string): void {
+    this.submenuVisibility[label] = !this.submenuVisibility[label];
+   }
+   
 }

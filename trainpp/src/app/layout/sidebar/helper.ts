@@ -1,5 +1,5 @@
 export interface ISidebarData{
-    routeLink: string;
+    routeLink?: string;
     icon?: string;
     label: string;
     items?: ISidebarData[];
