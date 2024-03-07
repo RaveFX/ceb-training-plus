@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { WorkbenchComponent } from './pages/workbench/workbench.component';
 import { ProgramListComponent } from './pages/program-list/program-list.component';
+import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
       {
         path: 'programlist',
         component: ProgramListComponent
+      },
+      {
+        path: 'programrequestdgm',
+        component: ProgramRequestDGMComponent
       }
     ]
   }
