@@ -12,7 +12,7 @@
     </div>
     <div class="userRole">
       <div class="userRole-icon">TO</div>
-      <div class="userRole-text">User Role</div>
+      <div class="userRole-text" *ngIf="collapsed">User Role</div>
     </div>
     <hr>
     <ul class="sidenav-nav">
@@ -34,7 +34,7 @@
   </div>
   <div class="userProfile">
     <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" />
-    <div class="userDetails">
+    <div class="userDetails" *ngIf="collapsed">
         <div class="userName">UserName</div>
         <div class="userEmail">user&#64;gmail.com</div>
     </div>

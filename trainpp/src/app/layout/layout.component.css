@@ -1,3 +1,7 @@
+.container {
+    padding: 1rem;
+}
+
 .size-lg {
     width:18rem;
     transition: all .3s ease;
