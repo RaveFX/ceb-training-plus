@@ -16,11 +16,16 @@ import { AvatarModule } from 'primeng/avatar';
 import { HeaderComponent } from './layout/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { WorkbenchComponent } from './pages/workbench/workbench.component';
 import { TableModule } from 'primeng/table';
+import { ProgramListComponent } from './pages/program-list/program-list.component';
+import { TagModule } from 'primeng/tag';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,8 @@ import { TableModule } from 'primeng/table';
     LayoutComponent,
     HeaderComponent,
     SidebarComponent,
-  WorkbenchComponent
+    WorkbenchComponent,
+    ProgramListComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,11 @@ import { TableModule } from 'primeng/table';
     HttpClientModule,
     ToastModule,
     BrowserAnimationsModule,
-    TableModule
+    TableModule,
+    TagModule,
+    MultiSelectModule,
+    FormsModule,
+    DropdownModule
 
   ],
   providers: [

@@ -1,0 +1,67 @@
+<p-card header="Training Programs">
+  <p-table #dt1 styleClass="p-datatable-striped" [value]="programs" [tableStyle]="{ 'min-width': '50rem', 'margin': 0 }"
+    [paginator]="true" [rows]="5" [globalFilterFields]="['name', 'targetGroup', 'statuses.status', 'status']">
+    <ng-template pTemplate="caption">
+      <div class="flex justify-content-between">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value || '', 'contains')"
+            placeholder="Search keyword" />
+        </span>
+        <p-button label="Danger" severity="danger" class="p-button-sm"></p-button>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 4rem">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th pSortableColumn="name">Program<p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="targetGroup">Target Group<p-sortIcon field="targetGroup"></p-sortIcon>
+        </th>
+        <th pSortableColumn="sDate">Starting Date<p-sortIcon field="sDate"></p-sortIcon>
+        </th>
+        <th pSortableColumn="eDate">Ending Date<p-sortIcon field="eDate"></p-sortIcon>
+        </th>
+        <th>
+          <div class="flex align-items-center">
+            Status
+            <p-columnFilter field="status" matchMode="equals" display="menu" [showMatchModes]="false"
+              [showOperator]="false" [showAddButton]="false">
+              <ng-template pTemplate="header">
+                <div class="px-3 pt-3 pb-0">
+                  <span class="font-bold">Status picker</span>
+                </div>
+              </ng-template>
+              <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                <p-dropdown [ngModel]="value" [options]="statuses" (onChange)="filter($event.value)" placeholder="Any"
+                  [showClear]="true">
+                  <ng-template let-option pTemplate="item">
+                    <p-tag [value]="option.value"></p-tag>
+                  </ng-template>
+                </p-dropdown>
+              </ng-template>
+            </p-columnFilter>
+          </div>
+        </th>
+        <th>Action</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-program>
+      <tr>
+        <td>
+          <p-tableCheckbox [value]="program"></p-tableCheckbox>
+        </td>
+        <td>{{ program.name }}</td>
+        <td>{{ program.targetGroup }}</td>
+        <td>{{ program.sDate.toLocaleDateString() }}</td>
+        <td>{{ program.eDate.toLocaleDateString() }}</td>
+        <td>
+          <p-tag [severity]="getSeverity(program.status)" [value]="program.status"></p-tag>
+        </td>
+        <td><button pButton>View</button></td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>
