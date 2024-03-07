@@ -1,4 +1,10 @@
-import { Component, Output, EventEmitter, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  Output,
+  EventEmitter,
+  HostListener,
+  OnInit,
+} from '@angular/core';
 import { sidebarData } from './nav-data';
 
 interface SideNavToggle {
@@ -11,22 +17,22 @@ interface SideNavToggle {
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })
-
-export class SidebarComponent implements OnInit{
-
+export class SidebarComponent implements OnInit {
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = true;
   screenWidth = 0;
   navData = sidebarData;
   submenuVisibility: { [key: string]: boolean } = {};
 
-
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
-    if(this.screenWidth <= 768) {
+    if (this.screenWidth <= 768) {
       this.collapsed = false;
-      this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+      this.onToggleSideNav.emit({
+        collapsed: this.collapsed,
+        screenWidth: this.screenWidth,
+      });
     }
   }
 
@@ -36,16 +42,22 @@ export class SidebarComponent implements OnInit{
 
   toggleCollapse(): void {
     this.collapsed = !this.collapsed;
-    this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+    this.onToggleSideNav.emit({
+      collapsed: this.collapsed,
+      screenWidth: this.screenWidth,
+    });
   }
 
   closeSidenav(): void {
     this.collapsed = false;
-    this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+    this.onToggleSideNav.emit({
+      collapsed: this.collapsed,
+      screenWidth: this.screenWidth,
+    });
   }
 
   toggleSubmenu(label: string): void {
     this.submenuVisibility[label] = !this.submenuVisibility[label];
-   }
-   
+  }
+  
 }

@@ -40,3 +40,9 @@
     </div>
   </div>
 </div>
+
+<div class="collapse-btn-container" [ngClass]="collapsed ? 'collapsed-btn' : '' ">
+  <div class="btn-container" (click)="toggleCollapse()">
+    <ng-icon name="heroChevronLeft" class="collapse-btn"></ng-icon>
+  </div>
+</div>
