@@ -4,12 +4,14 @@
             "fullName": "viranga",
             "email": "viranga@gmail.com",
             "password": "1234",
+            "role": "DGM",
             "id": 1
         },
         {
             "fullName": "ravindu",
             "email": "ravindu@gmail.com",
             "password": "1234",
+            "role": "TO",
             "id": 1
         }
     ]
