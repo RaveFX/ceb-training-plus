@@ -26,6 +26,11 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
+import { MenuModule } from 'primeng/menu';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle } from '@ng-icons/heroicons/outline';
+import { NgIconsModule } from '@ng-icons/core';
+import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,8 @@ import { DropdownModule } from 'primeng/dropdown';
     HeaderComponent,
     SidebarComponent,
     WorkbenchComponent,
-    ProgramListComponent
+    ProgramListComponent,
+    SublevelMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +63,11 @@ import { DropdownModule } from 'primeng/dropdown';
     TagModule,
     MultiSelectModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    MenuModule,
+    PanelMenuModule,
+    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle})
+
 
   ],
   providers: [
