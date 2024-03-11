@@ -1,10 +1,10 @@
-export interface Product {
+export interface Task {
   id: string;
   task: string;
   rDate: Date;
 }
 
-export const PRODUCTS: Product[] = [
+export const TASKS: Task[] = [
   {
     id: "P001",
     task: "Launch program : Training 001",

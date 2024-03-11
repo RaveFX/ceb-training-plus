@@ -14,7 +14,7 @@ export const to_sidebarData: ISidebarData[] = [
     {
         label: 'Workbench',
         icon: 'heroBriefcase',
-        routeLink: '/workbench',
+        routeLink: '/to/workbench',
     },
     {
         label: 'Canvas',
@@ -64,7 +64,7 @@ export const dgm_sidebarData: ISidebarData[] = [
     {
         label: 'Workbench',
         icon: 'heroBriefcase',
-        routeLink: '/workbench',
+        routeLink: '/dgm/workbench',
     },
     {
         label: 'Canvas',

@@ -39,6 +39,10 @@ const routes: Routes = [
         path: 'workbench',
         component: WorkbenchComponent
       },
+      {
+        path: 'programrequestdgm',
+        component: ProgramRequestDGMComponent
+      }
     ]
   },
   {
@@ -62,10 +66,6 @@ const routes: Routes = [
         path: 'programlist',
         component: ProgramListComponent
       },
-      {
-        path: 'programrequestdgm',
-        component: ProgramRequestDGMComponent
-      }
     ]
   }
 ];

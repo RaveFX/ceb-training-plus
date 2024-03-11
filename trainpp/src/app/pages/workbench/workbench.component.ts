@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product, PRODUCTS } from './data/products-data';
+import { Task, TASKS } from './data/tasks-data';
 
 @Component({
   selector: 'app-workbench',
@@ -7,7 +7,7 @@ import { Product, PRODUCTS } from './data/products-data';
   styleUrl: './workbench.component.css'
 })
 export class WorkbenchComponent implements OnInit {
-  products: Product[] = PRODUCTS;
+  tasks: Task[] = TASKS;
 
   constructor() {}
 

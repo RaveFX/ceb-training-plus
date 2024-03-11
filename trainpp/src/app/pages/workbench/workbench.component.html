@@ -1,5 +1,5 @@
 <p-card header="Workbench">
-  <p-table #dt1 styleClass="p-datatable-striped" [value]="products" [tableStyle]="{ 'min-width': '50rem', 'margin': 0 }"
+  <p-table #dt1 styleClass="p-datatable-striped" [value]="tasks" [tableStyle]="{ 'min-width': '50rem', 'margin': 0 }"
     [paginator]="true" [rows]="5" [globalFilterFields]="['task']">
     <ng-template pTemplate="caption">
       <div class="flex">
@@ -19,13 +19,13 @@
         <th>Action</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-product>
+    <ng-template pTemplate="body" let-task>
       <tr>
         <td>
-            <p-tableCheckbox [value]="product"></p-tableCheckbox>
+            <p-tableCheckbox [value]="task"></p-tableCheckbox>
         </td>
-        <td>{{ product.task }}</td>
-        <td>{{ product.rDate.toLocaleDateString() }}</td>
+        <td>{{ task.task }}</td>
+        <td>{{ task.rDate.toLocaleDateString() }}</td>
         <td><button pButton>View</button></td>
       </tr>
     </ng-template>
