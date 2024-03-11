@@ -11,8 +11,9 @@
         </button> -->
     </div>
     <div class="userRole">
-      <div class="userRole-icon">TO</div>
-      <div class="userRole-text" *ngIf="collapsed">{{userRole}}</div>
+      <div class="userRole-icon">{{userRole}}</div>
+      <div class="userRole-text" *ngIf="collapsed && userRole === 'TO'">Training Officer</div>
+      <div class="userRole-text" *ngIf="collapsed && userRole === 'DGM'">Deputy General Manager</div>
     </div>
     <hr>
     <ul class="sidenav-nav">
@@ -20,6 +21,7 @@
         <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]" (click)="toggleSubmenu(data.label)">
           <ng-icon class="sidenav-link-icon" [name]="data.icon ? data.icon : ''"></ng-icon>
           <span class="sidenav-link-text" *ngIf="collapsed">{{ data.label }}</span>
+          <ng-icon class="toggleSubmenu-icon" [name]="submenuVisibility[data.label] ? 'heroChevronUp' : 'heroChevronDown'" *ngIf="data.items && collapsed"></ng-icon>
         </a>
         <ul class="sidebar-submenu" *ngIf="data.items && collapsed && submenuVisibility[data.label]">
           <li class="sidebar-sub-item" *ngFor="let data of data.items">
@@ -43,6 +45,6 @@
 
 <div class="collapse-btn-container" [ngClass]="collapsed ? 'collapsed-btn' : '' ">
   <div class="btn-container" (click)="toggleCollapse()">
-    <ng-icon name="heroChevronLeft" class="collapse-btn"></ng-icon>
+    <ng-icon [name]="collapsed ? 'heroChevronLeft' : 'heroChevronRight'" class="collapse-btn"></ng-icon>
   </div>
 </div>

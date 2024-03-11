@@ -37,7 +37,7 @@ export class LoginComponent {
           sessionStorage.setItem('email', email as string);
           sessionStorage.setItem('name', response[0].fullName);
           sessionStorage.setItem('role', response[0].role);
-          if(response[0].role === 'GDM'){
+          if(response[0].role === 'DGM'){
             this.router.navigate(['/dgm']);
           }else if (response[0].role === 'TO'){
             this.router.navigate(['/to']);
