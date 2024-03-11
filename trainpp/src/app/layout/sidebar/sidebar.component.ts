@@ -5,7 +5,9 @@ import {
   HostListener,
   OnInit,
 } from '@angular/core';
-import { sidebarData } from './nav-data';
+import { to_sidebarData, dgm_sidebarData } from './nav-data';
+import { ISidebarData } from './helper';
+
 
 interface SideNavToggle {
   screenWidth: number;
@@ -25,7 +27,7 @@ export class SidebarComponent implements OnInit {
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = true;
   screenWidth = 0;
-  navData = sidebarData;
+  navData: ISidebarData[] = [];
   submenuVisibility: { [key: string]: boolean } = {};
 
   @HostListener('window:resize', ['$event'])
@@ -42,6 +44,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
+    this.setNavDataBasedOnRole();
   }
 
   toggleCollapse(): void {
@@ -63,5 +66,15 @@ export class SidebarComponent implements OnInit {
   toggleSubmenu(label: string): void {
     this.submenuVisibility[label] = !this.submenuVisibility[label];
   }
+
+  setNavDataBasedOnRole(): void {
+    if (this.userRole === 'TO') {
+      this.navData = to_sidebarData;
+    } else if (this.userRole === 'DGM') {
+      this.navData = dgm_sidebarData;
+    } else {
+      this.navData = to_sidebarData;
+    }
+ }
   
 }

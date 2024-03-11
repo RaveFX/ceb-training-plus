@@ -17,11 +17,15 @@
   flex-direction: row;
   align-items: center;
   padding: 1.5rem 0.938rem 0.5rem;
-  justify-content: center;
+  justify-content: left;
 
   .userRole-icon{
     font-size: medium;
     font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: #FFCD4D;
+    color: #000;
   }
 
   .userRole-text {
@@ -89,7 +93,7 @@
 }
 
 .sidenav-collapsed {
-  width: 18rem;
+  width: 20rem;
 }
 
 .sidenav-nav {
@@ -125,6 +129,15 @@
 
       .sidenav-link-text {
         margin-left: 1.5rem;
+        width: 100%;
+      }
+
+      .toggleSubmenu-icon {
+        font-size: 20px;
+        width: 2rem;
+        min-width: 2rem;
+        margin: 0 0.5rem;
+        text-align: center;
       }
     }
 
@@ -238,6 +251,6 @@
 }
 
 .collapsed-btn {
-  margin-left: 18rem;
+  margin-left: 20rem;
   transition-duration: 0.5s;
 }

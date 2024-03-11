@@ -28,7 +28,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 import { MenuModule } from 'primeng/menu';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft } from '@ng-icons/heroicons/outline';
+import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft, heroChevronDown,heroChevronUp, heroChevronRight, heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, 
+
+  heroBuildingOffice2, heroNoSymbol, heroBuildingOffice} from '@ng-icons/heroicons/outline';
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
@@ -69,7 +71,7 @@ import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-
     DropdownModule,
     MenuModule,
     PanelMenuModule,
-    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft})
+    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft, heroChevronDown, heroChevronUp, heroChevronRight, heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, heroBuildingOffice2, heroNoSymbol, heroBuildingOffice})
 
 
   ],
