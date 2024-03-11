@@ -18,6 +18,10 @@ interface SideNavToggle {
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent implements OnInit {
+  userName = sessionStorage.getItem('name');
+  userEmail = sessionStorage.getItem('email');
+  userRole = sessionStorage.getItem('role');
+
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = true;
   screenWidth = 0;

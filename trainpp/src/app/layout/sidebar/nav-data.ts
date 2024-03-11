@@ -2,40 +2,29 @@ import { ISidebarData } from "./helper";
 
 export const sidebarData: ISidebarData[] = [
     {
-        label: 'Home',
-        icon: 'heroHome',
+        label: 'Dashboard',
+        icon: 'heroCog',
         routeLink: '/home'
     },
     {
-        label: 'Dashboard',
-        icon: 'heroCog',
-        routeLink: '/login'
-    },
-
-    {
         label: 'Scorecard',
         icon: 'heroClipboard',
-        routeLink: '/login'
+        // routeLink: '/scorboard'
     },
     {
         label: 'Workbench',
         icon: 'heroBriefcase',
-        // routeLink: '/login',
-        items: [
-            {
-                routeLink: 'workbench/sub1',
-                label: 'SubOne',
-                icon: 'heroBriefcase',
-
-            },
-
-            {
-                routeLink: 'workbench/sub2',
-                label: 'SubTwo',
-                icon: 'heroBriefcase',
-
-            }
-        ]
+        routeLink: '/workbench',
+    },
+    {
+        label: 'Canvas',
+        icon: 'heroPencilSquare',
+        routeLink: '/canvas',
+    },
+    {
+        label: 'Program List',
+        icon: 'heroBriefcase',
+        routeLink: '/canvas',
     },
     {
         label: 'Programs',
@@ -48,7 +37,6 @@ export const sidebarData: ISidebarData[] = [
                 icon: 'heroBriefcase',
 
             },
-
             {
                 routeLink: 'workbench/sub2',
                 label: 'SubTwo',
@@ -60,7 +48,7 @@ export const sidebarData: ISidebarData[] = [
     {
         label: 'Canvas',
         icon: 'heroPencilSquare',
-        routeLink: '/login'
+        // routeLink: '/login'
     }
 
 ];

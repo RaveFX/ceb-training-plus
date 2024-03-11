@@ -35,7 +35,13 @@ export class LoginComponent {
       (response) => {
         if (response.length > 0 && response[0].password === password) {
           sessionStorage.setItem('email', email as string);
-          this.router.navigate(['/layout/home']);
+          sessionStorage.setItem('name', response[0].fullName);
+          sessionStorage.setItem('role', response[0].role);
+          if(response[0].role === 'GDM'){
+            this.router.navigate(['/dgm']);
+          }else if (response[0].role === 'TO'){
+            this.router.navigate(['/to']);
+          }
         } else {
           this.msgService.add({
             severity: 'error',

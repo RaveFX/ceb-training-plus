@@ -23,7 +23,26 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'layout',
+    path: 'dgm',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+        path: 'workbench',
+        component: WorkbenchComponent
+      },
+    ]
+  },
+  {
+    path: 'to',
     component: LayoutComponent,
     children: [
       {
