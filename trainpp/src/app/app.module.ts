@@ -31,6 +31,8 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft } from '@ng-icons/heroicons/outline';
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
+import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component'
     SidebarComponent,
     WorkbenchComponent,
     ProgramListComponent,
-    SublevelMenuComponent
+    SublevelMenuComponent,
+    ProgramRequestDGMComponent,
   ],
   imports: [
     BrowserModule,
