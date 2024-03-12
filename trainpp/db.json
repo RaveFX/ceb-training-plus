@@ -77,5 +77,62 @@
       "rDate": "2024/02/26",
       "role": "DGM"
     }
+  ],
+
+  "programs": [
+    {
+      "id": "P001",
+      "type": "Training",
+      "name": "Training 001",
+      "targetGroup": "Clerks",
+      "project_manager": "Ravindu Viranga",
+      "status": "approved",
+      "centre": "Piliyandala"
+    },
+    {
+      "id": "P002",
+      "type": "Examination",
+      "name": "Exam 001",
+      "targetGroup": "Clerks",
+      "project_manager": "Jonny Depp",
+      "status": "pending",
+      "centre": "Piliyandala"
+    },
+    {
+      "id": "P003",
+      "type": "Training",
+      "name": "Training 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "pending",
+      "centre": "Castlereigh"
+    },
+    {
+      "id": "P004",
+      "type": "Examination",
+      "name": "Exam 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "rejected",
+      "centre": "Castlereigh"
+    },
+    {
+      "id": "P005",
+      "type": "Training",
+      "name": "Training 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "pending",
+      "centre": "Kalawana"
+    },
+    {
+      "id": "P006",
+      "type": "Examination",
+      "name": "Exam 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "rejected",
+      "centre": "Kinchigune"
+    }
   ]
 }

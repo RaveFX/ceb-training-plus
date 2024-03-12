@@ -49,6 +49,7 @@ import {
   heroBuildingOffice2,
   heroNoSymbol,
   heroBuildingOffice,
+  heroTrash
 } from '@ng-icons/heroicons/outline';
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
@@ -115,6 +116,7 @@ import { ContentComponent } from './pages/program-list-dgm/content/content.compo
       heroBuildingOffice2,
       heroNoSymbol,
       heroBuildingOffice,
+      heroTrash
     }),
   ],
   providers: [provideClientHydration(), MessageService],
