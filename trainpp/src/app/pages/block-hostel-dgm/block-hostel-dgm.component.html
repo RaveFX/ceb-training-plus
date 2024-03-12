@@ -1,1 +1,17 @@
-<p>block-hostel-dgm works!</p>
+<div class="pl-5">
+    <div *ngFor="let building of buildings">
+      <h2>{{ building.name }}</h2>
+      <div class="flex flex-direction-row ">
+        <div *ngFor="let room of building.rooms" class="room-card">
+          <p-button label="" [outlined]="true" [text]="true" [raised]="true" [plain]="true">
+            <div>
+              <p>Room No.</p>
+              <h3>{{ room.roomNo }}</h3>
+              <p class="mb-0">Beds: {{ room.beds }}</p>
+            </div>
+          </p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

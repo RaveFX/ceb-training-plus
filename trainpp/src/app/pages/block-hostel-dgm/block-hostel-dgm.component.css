@@ -1,0 +1,17 @@
+.blockcards{
+    width: 70vw;
+    align-content: end;
+    margin-left: 20vw;
+}
+
+.flex-direction-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* This allows items to wrap onto the next line */
+  }
+  
+  .room-card {
+    margin-right: 10px; /* Adjust as needed */
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  

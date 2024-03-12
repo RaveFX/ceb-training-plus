@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { WorkbenchComponent } from './pages/workbench/workbench.component';
 import { ProgramListComponent } from './pages/program-list/program-list.component';
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
+import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path: 'programrequestdgm',
         component: ProgramRequestDGMComponent
+      },
+      {
+        path: 'blockhostel',
+        component: BlockHostelDgmComponent
       }
     ]
   },
