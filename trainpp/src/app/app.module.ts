@@ -34,6 +34,7 @@ import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, hero
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
+import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-
     ProgramListComponent,
     SublevelMenuComponent,
     ProgramRequestDGMComponent,
+    BlockHostelDgmComponent,
   ],
   imports: [
     BrowserModule,
