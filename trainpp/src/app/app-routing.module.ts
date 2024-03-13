@@ -8,6 +8,7 @@ import { WorkbenchComponent } from './pages/workbench/workbench.component';
 import { ProgramListComponent } from './pages/program-list/program-list.component';
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
 import { ProgramListDgmComponent } from './pages/program-list-dgm/program-list-dgm.component';
+import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
       {
         path: 'programrequestdgm',
         component: ProgramRequestDGMComponent
+      },
+      {
+        path: 'program/:id',
+        component: ProgramListConfirmDgmComponent
       }
     ]
   },

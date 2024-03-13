@@ -87,6 +87,9 @@
       "targetGroup": "Clerks",
       "project_manager": "Ravindu Viranga",
       "status": "approved",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
       "centre": "Piliyandala"
     },
     {
@@ -96,6 +99,9 @@
       "targetGroup": "Clerks",
       "project_manager": "Jonny Depp",
       "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
       "centre": "Piliyandala"
     },
     {
@@ -105,6 +111,9 @@
       "targetGroup": "Clerks",
       "project_manager": "Jone Doe",
       "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
       "centre": "Castlereigh"
     },
     {
@@ -114,6 +123,9 @@
       "targetGroup": "Clerks",
       "project_manager": "Jone Doe",
       "status": "rejected",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
       "centre": "Castlereigh"
     },
     {
@@ -123,6 +135,9 @@
       "targetGroup": "Clerks",
       "project_manager": "Jone Doe",
       "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
       "centre": "Kalawana"
     },
     {
@@ -132,6 +147,9 @@
       "targetGroup": "Clerks",
       "project_manager": "Jone Doe",
       "status": "rejected",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
       "centre": "Kinchigune"
     }
   ]

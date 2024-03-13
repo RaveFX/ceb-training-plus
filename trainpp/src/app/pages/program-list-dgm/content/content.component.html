@@ -80,7 +80,9 @@
           <p-tag [severity]="getSeverity(program.status)" [value]="program.status"></p-tag>
         </td>
         <td>
-          <p-button size="small" severity="secondary">View</p-button>
+          <a [routerLink]="['../program', program.id]">
+            <p-button size="small" severity="secondary">View</p-button>
+          </a>
           <p-button icon="pi pi-trash" size="small" severity="danger" class="mx-1"></p-button>
           <p-button icon="pi pi-file-edit" size="small" severity="info"></p-button>
         </td>

@@ -15,4 +15,8 @@ export class ProgramService {
   getProgramByTCentre(centre: string):  Observable<Program[]>{
     return this.http.get<Program[]>(`${this.baseUrl}/programs?centre=${centre}`);
   }
+
+  getProgramById(id: string): Observable<Program[]>{
+    return this.http.get<Program[]>(`${this.baseUrl}/programs?id=${id}`)
+  }
 }

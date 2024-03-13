@@ -58,6 +58,7 @@ import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-d
 import { ProgramListDgmComponent } from './pages/program-list-dgm/program-list-dgm.component';
 import { TabViewModule } from 'primeng/tabview';
 import { ContentComponent } from './pages/program-list-dgm/content/content.component';
+import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { ContentComponent } from './pages/program-list-dgm/content/content.compo
     BlockHostelDgmComponent,
     ProgramListDgmComponent,
     ContentComponent,
+    ProgramListConfirmDgmComponent,
   ],
   imports: [
     BrowserModule,
