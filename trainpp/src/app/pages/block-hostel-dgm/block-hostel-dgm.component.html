@@ -1,17 +1,45 @@
+<div class="flex">
+  <div class="ml-5">
+    <h2>Hostel Blocking</h2>
+  </div>
+  <div class="ml-5 card-container">
+    <div class="card">
+      <p-tabView (selectedTabChange)="onTabChange($event)">
+        <p-tabPanel header="Piliyandala"></p-tabPanel>
+        <p-tabPanel header="Castlereigh"></p-tabPanel>
+        <p-tabPanel header="Kinchigune"></p-tabPanel>
+        <p-tabPanel header="Kalawana"></p-tabPanel>
+       </p-tabView>
+       
+      <!-- <p-tabView>
+        <p-tabPanel header="Piliyandala">
+        </p-tabPanel>
+        <p-tabPanel header="Castlereigh">
+        </p-tabPanel>
+        <p-tabPanel header="Kinchigune">
+        </p-tabPanel>
+        <p-tabPanel header="Kalawana">
+        </p-tabPanel>
+      </p-tabView> -->
+    </div>
+  </div>
+</div>
+
+
+
 <div class="pl-5">
-    <div *ngFor="let building of buildings">
-      <h2>{{ building.name }}</h2>
-      <div class="flex flex-direction-row ">
-        <div *ngFor="let room of building.rooms" class="room-card">
-          <p-button label="" [outlined]="true" [text]="true" [raised]="true" [plain]="true">
-            <div>
-              <p>Room No.</p>
-              <h3>{{ room.roomNo }}</h3>
-              <p class="mb-0">Beds: {{ room.beds }}</p>
-            </div>
-          </p-button>
-        </div>
+  <div *ngFor="let building of buildings">
+    <h3>{{ building.name }}</h3>
+    <div class="flex flex-direction-row">
+      <div *ngFor="let room of building.rooms" class="room-card">
+        <p-button label="" [outlined]="true" [text]="true" [raised]="true" [plain]="true">
+          <div>
+            <p>Room No.</p>
+            <h3>{{ room.roomNo }}</h3>
+            <p class="mb-0">Beds: {{ room.beds }}</p>
+          </div>
+        </p-button>
       </div>
     </div>
   </div>
-  
+</div>

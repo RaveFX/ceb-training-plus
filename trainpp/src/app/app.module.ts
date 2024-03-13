@@ -27,6 +27,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 import { MenuModule } from 'primeng/menu';
+import { TabViewModule } from 'primeng/tabview';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft, heroChevronDown,heroChevronUp, heroChevronRight, heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, 
 
@@ -73,6 +74,7 @@ import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-d
     DropdownModule,
     MenuModule,
     PanelMenuModule,
+    TabViewModule,
     NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft, heroChevronDown, heroChevronUp, heroChevronRight, heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, heroBuildingOffice2, heroNoSymbol, heroBuildingOffice})
 
 
