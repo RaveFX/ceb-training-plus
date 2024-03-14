@@ -19,19 +19,20 @@
   </div>
 
   <!-- data table -->
-  <p-table #dt1 styleClass="p-datatable-striped" [value]="participants" [tableStyle]="{ 'min-width': '50rem', 'margin': 0 }"
-    [paginator]="true" [rows]="5" [globalFilterFields]="['name', 'role', 'email', 'contact_no']">
+  <p-table #dt1 styleClass="p-datatable-striped" [value]="participants"
+    [tableStyle]="{ 'min-width': '50rem', 'margin': 0 }" [paginator]="true" [rows]="5"
+    [globalFilterFields]="['name', 'role', 'email', 'contact_no']">
     <ng-template pTemplate="caption">
       <div class="flex justify-content-between align-items-end">
         <div class="flex flex-column">
-            <span style="font-size: 1.2rem">Participant List</span>
-            <span class="p-input-icon-left mt-2">
-                <i class="pi pi-search"></i>
-                <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value || '', 'contains')"
-                  placeholder="Search keyword" />
-              </span>
+          <span style="font-size: 1.2rem">Participant List</span>
+          <span class="p-input-icon-left mt-2">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value || '', 'contains')"
+              placeholder="Search keyword" />
+          </span>
         </div>
-        <p-button label="Send Confirmation" class="button" size="small"></p-button>
+        <p-button (click)="showDialog()" label="Send Confirmation" class="button" size="small"></p-button>
       </div>
     </ng-template>
     <ng-template pTemplate="header">
@@ -39,10 +40,14 @@
         <th style="width: 4rem">
           <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
         </th>
-        <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
-        <th pSortableColumn="name">Job Role<p-sortIcon field="role"></p-sortIcon></th>
-        <th pSortableColumn="joined_date">Joined Date<p-sortIcon field="joined_date"></p-sortIcon></th>
-        <th pSortableColumn="email">Email<p-sortIcon field="email"></p-sortIcon></th>
+        <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="name">Job Role<p-sortIcon field="role"></p-sortIcon>
+        </th>
+        <th pSortableColumn="joined_date">Joined Date<p-sortIcon field="joined_date"></p-sortIcon>
+        </th>
+        <th pSortableColumn="email">Email<p-sortIcon field="email"></p-sortIcon>
+        </th>
         <th>Contact_No.</th>
         <th>Action</th>
       </tr>
@@ -58,10 +63,26 @@
         <td>{{ participant.email }}</td>
         <td>{{ participant.contact_no }}</td>
         <td>
-            <p-button class="mr-1" icon="pi pi-check" [rounded]="true" size="small"></p-button>
-            <p-button icon="pi pi-times" [rounded]="true" severity="danger" size="small"></p-button>
+          <p-button severity="danger" label="Reject" size="small"></p-button>
         </td>
       </tr>
     </ng-template>
   </p-table>
 </p-card>
+
+
+<!-- Dialog*********************************************************** -->
+<p-dialog header="Header" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '40vw' }"
+  [draggable]="false" [resizable]="false">
+  <ng-template pTemplate="header">
+    <div class="flex flex-column">
+      <span class="font-bold white-space-nowrap" style="font-size: x-large;">Confirm Participant List</span>
+      <span class="font-semibold white-space-nowrap">{{program.name}}</span>
+    </div>
+  </ng-template>
+  <label for="comments">Enter Comments:</label><br>
+  <textarea rows="5"class="w-full" pInputTextarea [(ngModel)]="value"></textarea>
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-check" (click)="submitFormData()" label="Confirm" pAutoFocus [autofocus]="true" size="small"></p-button>
+  </ng-template>
+</p-dialog>

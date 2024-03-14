@@ -59,6 +59,8 @@ import { ProgramListDgmComponent } from './pages/program-list-dgm/program-list-d
 import { TabViewModule } from 'primeng/tabview';
 import { ContentComponent } from './pages/program-list-dgm/content/content.component';
 import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [
@@ -100,6 +102,8 @@ import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program
     MenuModule,
     PanelMenuModule,
     TabViewModule,
+    DialogModule,
+    InputTextareaModule,
     NgIconsModule.withIcons({
       heroCog,
       heroHome,

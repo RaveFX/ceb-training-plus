@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Program } from '../interfaces/program';
+import { Approval } from '../interfaces/participantListApproval';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -18,5 +19,9 @@ export class ProgramService {
 
   getProgramById(id: string): Observable<Program[]>{
     return this.http.get<Program[]>(`${this.baseUrl}/programs?id=${id}`)
+  }
+
+  sendPaticipantListApproval(details: Approval ) {
+    return this.http.post(`${this.baseUrl}/participantListApproval`, details);
   }
 }
