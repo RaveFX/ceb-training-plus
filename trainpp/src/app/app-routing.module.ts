@@ -9,6 +9,7 @@ import { ProgramListComponent } from './pages/program-list/program-list.componen
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
 import { ProgramListDgmComponent } from './pages/program-list-dgm/program-list-dgm.component';
 import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
+import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-results-dgm.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
       {
         path: 'program/:id',
         component: ProgramListConfirmDgmComponent
+      },
+      {
+        path: 'results',
+        component: ApproveResultsDgmComponent
       }
     ]
   },

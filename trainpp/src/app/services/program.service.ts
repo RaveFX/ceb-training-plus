@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Program } from '../interfaces/program';
 import { Approval } from '../interfaces/participantListApproval';
+import { ResultApproval } from '../interfaces/result';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -23,5 +24,9 @@ export class ProgramService {
 
   sendPaticipantListApproval(details: Approval ) {
     return this.http.post(`${this.baseUrl}/participantListApproval`, details);
+  }
+
+  sendResultApproval(details: ResultApproval ) {
+    return this.http.post(`${this.baseUrl}/resultApproval`, details);
   }
 }
