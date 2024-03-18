@@ -61,6 +61,7 @@ import { ContentComponent } from './pages/program-list-dgm/content/content.compo
 import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-results-dgm.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     ProgramListDgmComponent,
     ContentComponent,
     ProgramListConfirmDgmComponent,
+    ApproveResultsDgmComponent,
   ],
   imports: [
     BrowserModule,
