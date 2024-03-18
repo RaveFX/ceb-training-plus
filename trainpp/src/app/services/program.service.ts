@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Program } from '../interfaces/program';
 import { Approval } from '../interfaces/participantListApproval';
 import { ResultApproval } from '../interfaces/result';
+import { Allowance } from '../interfaces/allowance';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -29,4 +30,10 @@ export class ProgramService {
   sendResultApproval(details: ResultApproval ) {
     return this.http.post(`${this.baseUrl}/resultApproval`, details);
   }
+
+  getAllowances() {
+    return this.http.get<Allowance[]>(`${this.baseUrl}/allowances`);
+  }
+  
+  
 }

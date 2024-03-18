@@ -63,6 +63,8 @@ import { DialogModule } from 'primeng/dialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-results-dgm.component';
 import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
+import { AccordionModule } from 'primeng/accordion';
+import { ChipModule } from 'primeng/chip';
 
 @NgModule({
   declarations: [
@@ -108,6 +110,8 @@ import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/appr
     TabViewModule,
     DialogModule,
     InputTextareaModule,
+    AccordionModule,
+    ChipModule,
     NgIconsModule.withIcons({
       heroCog,
       heroHome,
