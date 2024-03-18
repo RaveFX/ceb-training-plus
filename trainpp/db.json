@@ -15,7 +15,6 @@
       "id": 2
     }
   ],
-
   "tasks": [
     {
       "id": "P001",
@@ -77,5 +76,81 @@
       "rDate": "2024/02/26",
       "role": "DGM"
     }
-  ]
+  ],
+  "programs": [
+    {
+      "id": "P001",
+      "type": "Training",
+      "name": "Training 001",
+      "targetGroup": "Clerks",
+      "project_manager": "Ravindu Viranga",
+      "status": "approved",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Piliyandala"
+    },
+    {
+      "id": "P002",
+      "type": "Examination",
+      "name": "Exam 001",
+      "targetGroup": "Clerks",
+      "project_manager": "Jonny Depp",
+      "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Piliyandala"
+    },
+    {
+      "id": "P003",
+      "type": "Training",
+      "name": "Training 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Castlereigh"
+    },
+    {
+      "id": "P004",
+      "type": "Examination",
+      "name": "Exam 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "rejected",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Castlereigh"
+    },
+    {
+      "id": "P005",
+      "type": "Training",
+      "name": "Training 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Kalawana"
+    },
+    {
+      "id": "P006",
+      "type": "Examination",
+      "name": "Exam 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "rejected",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Kinchigune"
+    }
+  ],
+  
+  "participantListApproval": []
 }

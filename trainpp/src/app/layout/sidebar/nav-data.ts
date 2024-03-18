@@ -72,6 +72,11 @@ export const dgm_sidebarData: ISidebarData[] = [
         routeLink: '/canvas',
     },
     {
+        label: 'Program List',
+        icon: 'heroQueueList',
+        routeLink: '/dgm/programlist',
+    },
+    {
         label: 'Resource Management',
         icon: 'heroBuildingOffice2',
         // routeLink: '/programlist',

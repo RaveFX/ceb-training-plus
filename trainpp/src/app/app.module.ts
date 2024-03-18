@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -28,14 +31,36 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 import { MenuModule } from 'primeng/menu';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft, heroChevronDown,heroChevronUp, heroChevronRight, heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, 
-
-  heroBuildingOffice2, heroNoSymbol, heroBuildingOffice} from '@ng-icons/heroicons/outline';
+import {
+  heroCog,
+  heroHome,
+  heroClipboard,
+  heroBriefcase,
+  heroPencilSquare,
+  heroXCircle,
+  heroChevronLeft,
+  heroChevronDown,
+  heroChevronUp,
+  heroChevronRight,
+  heroQueueList,
+  heroUserPlus,
+  heroListBullet,
+  heroCheckBadge,
+  heroBuildingOffice2,
+  heroNoSymbol,
+  heroBuildingOffice,
+  heroTrash
+} from '@ng-icons/heroicons/outline';
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
 import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
-
+import { ProgramListDgmComponent } from './pages/program-list-dgm/program-list-dgm.component';
+import { TabViewModule } from 'primeng/tabview';
+import { ContentComponent } from './pages/program-list-dgm/content/content.component';
+import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [
@@ -51,6 +76,9 @@ import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-d
     SublevelMenuComponent,
     ProgramRequestDGMComponent,
     BlockHostelDgmComponent,
+    ProgramListDgmComponent,
+    ContentComponent,
+    ProgramListConfirmDgmComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,13 +101,31 @@ import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-d
     DropdownModule,
     MenuModule,
     PanelMenuModule,
-    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft, heroChevronDown, heroChevronUp, heroChevronRight, heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, heroBuildingOffice2, heroNoSymbol, heroBuildingOffice})
-
-
+    TabViewModule,
+    DialogModule,
+    InputTextareaModule,
+    NgIconsModule.withIcons({
+      heroCog,
+      heroHome,
+      heroClipboard,
+      heroBriefcase,
+      heroPencilSquare,
+      heroXCircle,
+      heroChevronLeft,
+      heroChevronDown,
+      heroChevronUp,
+      heroChevronRight,
+      heroQueueList,
+      heroUserPlus,
+      heroListBullet,
+      heroCheckBadge,
+      heroBuildingOffice2,
+      heroNoSymbol,
+      heroBuildingOffice,
+      heroTrash
+    }),
   ],
-  providers: [
-    provideClientHydration(), MessageService
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideClientHydration(), MessageService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
