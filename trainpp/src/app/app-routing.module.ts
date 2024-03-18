@@ -10,6 +10,7 @@ import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-
 import { ProgramListDgmComponent } from './pages/program-list-dgm/program-list-dgm.component';
 import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
 import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-results-dgm.component';
+import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,10 @@ const routes: Routes = [
       {
         path: 'results',
         component: ApproveResultsDgmComponent
+      },
+      {
+        path: 'allowance',
+        component: ApproveAllowanceDgmComponent
       }
     ]
   },
