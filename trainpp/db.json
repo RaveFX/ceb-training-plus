@@ -78,5 +78,135 @@
       "rDate": "2024/02/26",
       "role": "DGM"
     }
+  ],
+
+  "locations": [
+    {
+      "name": "Piliyandala",
+      "id": "LOC001",
+      "hostels": [
+        {
+          "name": "Hostel A",
+          "buildings": [
+            {
+              "name": "Building 1",
+              "rooms": [
+                {
+                  "number": "101",
+                  "capacity": 2
+                },
+                {
+                  "number": "102",
+                  "capacity": 3
+                }
+              ]
+            },
+            {
+              "name": "Building 2",
+              "rooms": [
+                {
+                  "number": "201",
+                  "capacity": 4
+                },
+                {
+                  "number": "202",
+                  "capacity": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hostel B",
+          "buildings": [
+            {
+              "name": "Building 3",
+              "rooms": [
+                {
+                  "number": "301",
+                  "capacity": 2
+                },
+                {
+                  "number": "302",
+                  "capacity": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Castlereigh",
+      "id": "LOC002",
+      "hostels": [
+        {
+          "name": "Hostel C",
+          "buildings": [
+            {
+              "name": "Building 4",
+              "rooms": [
+                {
+                  "number": "401",
+                  "capacity": 2
+                },
+                {
+                  "number": "402",
+                  "capacity": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kinchigune",
+      "id": "LOC003",
+      "hostels": [
+        {
+          "name": "Hostel D",
+          "buildings": [
+            {
+              "name": "Building 5",
+              "rooms": [
+                {
+                  "number": "501",
+                  "capacity": 2
+                },
+                {
+                  "number": "502",
+                  "capacity": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kalawana",
+      "id": "LOC004",
+      "hostels": [
+        {
+          "name": "Hostel E",
+          "buildings": [
+            {
+              "name": "Building 6",
+              "rooms": [
+                {
+                  "number": "601",
+                  "capacity": 2
+                },
+                {
+                  "number": "602",
+                  "capacity": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

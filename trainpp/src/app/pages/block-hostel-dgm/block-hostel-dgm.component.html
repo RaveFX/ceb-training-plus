@@ -1,45 +1,36 @@
-<div class="flex">
-  <div class="ml-5">
-    <h2>Hostel Blocking</h2>
-  </div>
-  <div class="ml-5 card-container">
-    <div class="card">
-      <p-tabView (selectedTabChange)="onTabChange($event)">
-        <p-tabPanel header="Piliyandala"></p-tabPanel>
-        <p-tabPanel header="Castlereigh"></p-tabPanel>
-        <p-tabPanel header="Kinchigune"></p-tabPanel>
-        <p-tabPanel header="Kalawana"></p-tabPanel>
-       </p-tabView>
-       
-      <!-- <p-tabView>
-        <p-tabPanel header="Piliyandala">
-        </p-tabPanel>
-        <p-tabPanel header="Castlereigh">
-        </p-tabPanel>
-        <p-tabPanel header="Kinchigune">
-        </p-tabPanel>
-        <p-tabPanel header="Kalawana">
-        </p-tabPanel>
-      </p-tabView> -->
-    </div>
-  </div>
+<div class="card flex">
+  <p class="ml-2 pt-0 mt-2 font-bold text-xl">Block Hostels</p>
+  <p-tabView>
+    <ng-container *ngFor="let location of locations">
+      <p-tabPanel [header]="location.name">
+        <div *ngFor="let hostel of location.hostels">
+          <h4>{{ hostel.name }}</h4>
+          <div *ngFor="let building of hostel.buildings">
+            <h5>{{ building.name }}</h5>
+
+            <div class="flex flex-column" *ngFor="let room of building.rooms">
+              <p-button class="mr-3" label="" (click)="showDialog(room)" [outlined]="true" [text]="true" [raised]="true"
+                [plain]="true">
+
+                <!-- <div *ngFor="let room of building.rooms"> -->
+                <div class="flex-row">
+                  <p class="font-bold">Room No: {{ room.number }}</p>
+                  <p class="text-sm">Capacity: {{ room.capacity }}</p>
+                </div>
+              </p-button>
+            </div>
+          </div>
+        </div>
+      </p-tabPanel>
+    </ng-container>
+  </p-tabView>
 </div>
 
-
-
-<div class="pl-5">
-  <div *ngFor="let building of buildings">
-    <h3>{{ building.name }}</h3>
-    <div class="flex flex-direction-row">
-      <div *ngFor="let room of building.rooms" class="room-card">
-        <p-button label="" [outlined]="true" [text]="true" [raised]="true" [plain]="true">
-          <div>
-            <p>Room No.</p>
-            <h3>{{ room.roomNo }}</h3>
-            <p class="mb-0">Beds: {{ room.beds }}</p>
-          </div>
-        </p-button>
-      </div>
-    </div>
-  </div>
+<div class="card flex justify-content-center">
+  <p-dialog header="Confirm blocking hostel room" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }"
+    [draggable]="false" [resizable]="false">
+    <p class="m-0">
+     Room No. {{ selectedRoom?.number }}
+    </p>
+  </p-dialog>
 </div>

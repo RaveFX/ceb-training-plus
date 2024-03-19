@@ -29,13 +29,17 @@ import { DropdownModule } from 'primeng/dropdown';
 import { MenuModule } from 'primeng/menu';
 import { TabViewModule } from 'primeng/tabview';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft, heroChevronDown,heroChevronUp, heroChevronRight, heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, 
-
-  heroBuildingOffice2, heroNoSymbol, heroBuildingOffice} from '@ng-icons/heroicons/outline';
+import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, 
+        heroXCircle, heroChevronLeft, heroChevronDown,heroChevronUp, heroChevronRight, 
+        heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, 
+        heroBuildingOffice2, heroNoSymbol, heroBuildingOffice} from '@ng-icons/heroicons/outline';
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
 import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
+import { ContentComponent } from './pages/block-hostel-dgm/content/content.component';
+import { BlockconfirmComponent } from './pages/block-hostel-dgm/blockconfirm/blockconfirm.component';
+import { DialogModule } from 'primeng/dialog';
 
 
 @NgModule({
@@ -52,6 +56,8 @@ import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-d
     SublevelMenuComponent,
     ProgramRequestDGMComponent,
     BlockHostelDgmComponent,
+    ContentComponent,
+    BlockconfirmComponent
   ],
   imports: [
     BrowserModule,
@@ -75,8 +81,10 @@ import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-d
     MenuModule,
     PanelMenuModule,
     TabViewModule,
-    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle, heroChevronLeft, heroChevronDown, heroChevronUp, heroChevronRight, heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, heroBuildingOffice2, heroNoSymbol, heroBuildingOffice})
-
+    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, 
+      heroXCircle, heroChevronLeft, heroChevronDown, heroChevronUp, heroChevronRight, 
+      heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, heroBuildingOffice2, heroNoSymbol, heroBuildingOffice}),
+      DialogModule
 
   ],
   providers: [
