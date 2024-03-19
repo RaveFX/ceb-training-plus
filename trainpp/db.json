@@ -151,14 +151,16 @@
       "centre": "Kinchigune"
     }
   ],
-  
+
   "participantListApproval": [],
 
   "resultApproval": [],
 
+  "allowanceApproval": [],
+
   "allowances": [
     {
-      "id":"P001",
+      "id": "P001",
       "name": "Training 001",
       "participants": [
         {
@@ -228,6 +230,6 @@
           "allowance": 13000
         }
       ]
-    }    
+    }
   ]
 }
