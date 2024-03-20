@@ -3,4 +3,5 @@ export interface Task {
     task: string;
     rDate: Date;
     role: string;
+    link: string;
   }
