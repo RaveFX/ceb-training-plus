@@ -20,61 +20,71 @@
       "id": "P001",
       "task": "Launch program : Training 001",
       "rDate": "2024/02/27",
-      "role": "TO"
+      "role": "TO",
+      "link": "/to/#"
     },
     {
       "id": "P002",
       "task": "Recommend trainee list - Training 001",
       "rDate": "2024/02/26",
-      "role": "TO"
+      "role": "TO",
+      "link": "/to/#"
     },
     {
       "id": "P003",
       "task": "New Program Request - Forwarded from DGM",
       "rDate": "2024/02/25",
-      "role": "TO"
+      "role": "TO",
+      "link": "/to/#"
     },
     {
       "id": "P004",
       "task": "Recommend Leave - A.E. Edirimanne.",
       "rDate": "2024/02/24",
-      "role": "TO"
+      "role": "TO",
+      "link": "/to/#"
     },
     {
       "id": "P005",
       "task": "Recommend trainee allowance",
       "rDate": "2024/02/26",
-      "role": "TO"
+      "role": "TO",
+      "link": "/to/#"
     },
     {
       "id": "P006",
       "task": "Approve/ Reject training/exam participant list",
       "rDate": "2024/02/26",
-      "role": "DGM"
+      "role": "DGM",
+      "link": "/dgm/programlist"
     },
     {
       "id": "P007",
       "task": "Approve most suitable institutes to conduct exams",
       "rDate": "2024/02/26",
-      "role": "DGM"
+      "role": "DGM",
+      "link": "/dgm/#"
     },
     {
       "id": "P008",
       "task": "Approve exam result sheet",
       "rDate": "2024/02/26",
-      "role": "DGM"
+      "role": "DGM",
+      "link": "/dgm/results"
     },
     {
       "id": "P009",
       "task": "Approve/ Reject  new program requests",
       "rDate": "2024/02/26",
-      "role": "DGM"
+      "role": "DGM",
+      "link": "/dgm/#"
     },
     {
       "id": "P010",
       "task": "Approve allowances of In-Plant trainings",
       "rDate": "2024/02/26",
-      "role": "DGM"
+      "role": "DGM",
+      "link": "/dgm/allowance"
     }
   ],
   "programs": [
