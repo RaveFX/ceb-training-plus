@@ -40,6 +40,8 @@ import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-d
 import { ContentComponent } from './pages/block-hostel-dgm/content/content.component';
 import { BlockconfirmComponent } from './pages/block-hostel-dgm/blockconfirm/blockconfirm.component';
 import { DialogModule } from 'primeng/dialog';
+import { ChipModule } from 'primeng/chip';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 
 @NgModule({
@@ -84,7 +86,9 @@ import { DialogModule } from 'primeng/dialog';
     NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, 
       heroXCircle, heroChevronLeft, heroChevronDown, heroChevronUp, heroChevronRight, 
       heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, heroBuildingOffice2, heroNoSymbol, heroBuildingOffice}),
-      DialogModule
+      DialogModule,
+      ChipModule,
+      InputTextareaModule
 
   ],
   providers: [

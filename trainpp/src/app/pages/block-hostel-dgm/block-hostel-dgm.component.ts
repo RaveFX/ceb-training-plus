@@ -8,206 +8,10 @@ import { Room } from '../../interfaces/rooms';
   styleUrl: './block-hostel-dgm.component.css'
 })
 export class BlockHostelDgmComponent {
-  //   buildings = [
-  //     {
-  //       location: 'piliyandala',
-  //       name: 'Building A',
-  //       rooms: [
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 }
-  //       ]
-  //     },
-  //     {
-  //       location: 'Kinchigune',
-  //       name: 'Building B',
-  //       rooms: [
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 }
-
-  //       ]
-  //     },
-  //     {
-  //       location: 'kalawana',
-  //       name: 'Building B',
-  //       rooms: [
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 }
-
-  //       ]
-  //     },
-  //     {
-  //       location: 'castlereigh',
-  //       name: 'Building B',
-  //       rooms: [
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '001', beds: 4 },
-  //         { roomNo: '002', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 },
-  //         { roomNo: '008', beds: 4 },
-  //         { roomNo: '009', beds: 2 },
-  //         { roomNo: '010', beds: 4 },
-  //         { roomNo: '011', beds: 2 }
-
-  //       ]
-  //     }
-  //   ];
-  // }
-
-  // // import { Component } from '@angular/core';
-  // // import { TabViewChangeEvent } from 'primeng/tabview';
-
-  // // @Component({
-  // //   selector: 'app-block-hostel-dgm',
-  // //   templateUrl: './block-hostel-dgm.component.html',
-  // //   styleUrls: ['./block-hostel-dgm.component.css']
-  // // })
-  // // export class BlockHostelDgmComponent {
-  // //     buildings = [
-  // //     {
-  // //       location: 'Piliyandala',
-  // //       name: 'PILI-Building A',
-  // //       rooms: [
-  // //         { roomNo: '001', beds: 4 },
-  // //         { roomNo: '010', beds: 4 },
-  // //         { roomNo: '011', beds: 2 }
-  // //       ]
-  // //     },
-  // //     {
-  // //       location: 'Kinchigune',
-  // //       name: 'KIN-Building B',
-  // //       rooms: [
-  // //         { roomNo: '001', beds: 4 },
-  // //         { roomNo: '002', beds: 2 },
-  // //         { roomNo: '009', beds: 2 },
-  // //         { roomNo: '010', beds: 4 },
-  // //         { roomNo: '011', beds: 2 }
-
-  // //       ]
-  // //     },
-  // //     {
-  // //       location: 'Kalawana',
-  // //       name: 'KAL-Building C',
-  // //       rooms: [
-  // //         { roomNo: '001', beds: 4 },
-  // //         { roomNo: '002', beds: 2 },
-  // //         { roomNo: '008', beds: 4 },
-  // //         { roomNo: '009', beds: 2 },
-  // //         { roomNo: '010', beds: 4 },
-  // //         { roomNo: '011', beds: 2 }
-
-  // //       ]
-  // //     },
-
-  // //     {
-  // //       location: 'Kalawana',
-  // //       name: 'KAL-Building F',
-  // //       rooms: [
-  // //         { roomNo: '008', beds: 4 },
-  // //         { roomNo: '009', beds: 2 },
-  // //         { roomNo: '010', beds: 4 },
-  // //         { roomNo: '011', beds: 2 }
-
-  // //       ]
-  // //     },
-  // //     {
-  // //       location: 'Castlereigh',
-  // //       name: 'CAS-Building D',
-  // //       rooms: [
-  // //         { roomNo: '001', beds: 4 },
-  // //         { roomNo: '002', beds: 2 },
-  // //         { roomNo: '008', beds: 4 },
-  // //         { roomNo: '011', beds: 2 }
-
-  // //       ]
-  // //     }
-  // //   ];
-  // //   selectedLocation: string = '';
-
-  // //   // onTabChange(event: { index: number }) {
-  // //   //   this.selectedLocation = this.buildings[event.index].location;
-  // //   // }
-
-  // //   // onTabChange(event: { index: number }) {
-  // //   //   const selectedIndex = (event as any).index; // Cast event to any and then access index
-  // //   //   this.selectedLocation = this.buildings[selectedIndex].location;
-  // //   // }
-
-  // //   onTabChange(event: TabViewChangeEvent) {
-  // //     const selectedIndex = event.index;
-  // //     this.selectedLocation = this.buildings[selectedIndex].location;
-  // //   }
-
   visible: boolean = false;
-  locations: any[] = []; // Initialize empty array for hostels
+  locations: any[] = [];
   selectedRoom: Room | null = null;
+  inputValue: any;
 
   constructor(private http: HttpClient) { }
 
@@ -216,18 +20,30 @@ export class BlockHostelDgmComponent {
   }
 
   fetchLocations() {
-    this.http.get<any[]>('http://localhost:3000/locations') // Replace URL with your JSON server endpoint
+    this.http.get<any[]>('http://localhost:3000/locations')
       .subscribe(data => {
         this.locations = data;
       });
   }
-  showDialog(room: Room) {
 
+  showDialog(room: Room) {
     this.visible = true;
     this.selectedRoom = room;
-
   }
 
+  // updateStatus(room: Room) {
+  //   room.status = true; // Update status to true
+  //   room.comments = this.inputValue; // Update comments
 
+  //   // Send PUT request to update room data on the server
+  //   this.http.put(`http://localhost:3000/locations/${room.number}/hostels/${room.}/buildings/${room.buildingId}/rooms/${room.roomId}`, room)
+  //     .subscribe(response => {
+  //       console.log('Room updated successfully:', response);
+  //       // Handle success
+  //       this.visible = false; // Close dialog after updating
+  //     }, error => {
+  //       console.error('Error updating room:', error);
+  //       // Handle error
+  //     });
+  // }
 }
-

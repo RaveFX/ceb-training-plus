@@ -1,4 +1,4 @@
-<div class="card flex">
+<div class="card">
   <p class="ml-2 pt-0 mt-2 font-bold text-xl">Block Hostels</p>
   <p-tabView>
     <ng-container *ngFor="let location of locations">
@@ -8,16 +8,20 @@
           <div *ngFor="let building of hostel.buildings">
             <h5>{{ building.name }}</h5>
 
-            <div class="flex flex-column" *ngFor="let room of building.rooms">
-              <p-button class="mr-3" label="" (click)="showDialog(room)" [outlined]="true" [text]="true" [raised]="true"
-                [plain]="true">
-
-                <!-- <div *ngFor="let room of building.rooms"> -->
-                <div class="flex-row">
-                  <p class="font-bold">Room No: {{ room.number }}</p>
-                  <p class="text-sm">Capacity: {{ room.capacity }}</p>
+            <div class="flex flex-wrap" style="margin-right: -0.5rem;">
+              <!-- Place buttons inside a single row -->
+              <div class="flex flex-row w-full">
+                <div class="p-2" *ngFor="let room of building.rooms">
+                  <!-- Adjust button width to fit in row -->
+                  <p-button class="mr-3" label="" (click)="showDialog(room)" [outlined]="true" [text]="true"
+                    [raised]="true" [plain]="true" styleClass="flex: 1;">
+                    <div class="">
+                      <p class="font-bold">Room No: {{ room.number }}</p>
+                      <p class="text-sm">Capacity: {{ room.capacity }}</p>
+                    </div>
+                  </p-button>
                 </div>
-              </p-button>
+              </div>
             </div>
           </div>
         </div>
@@ -27,10 +31,27 @@
 </div>
 
 <div class="card flex justify-content-center">
-  <p-dialog header="Confirm blocking hostel room" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }"
+  <p-dialog header="Confirm blocking hostel room" [(visible)]="visible" [modal]="true" [style]="{ width: '35.7vw' }"
     [draggable]="false" [resizable]="false">
-    <p class="m-0">
-     Room No. {{ selectedRoom?.number }}
+    <p class="m-0 ">
+      <p-chip class="mr-3" label="Room No. : {{ selectedRoom?.number }}" icon="pi pi-home"></p-chip>
+      <p-chip label="Capacity : {{ selectedRoom?.capacity }}" icon="pi pi-users"></p-chip>
     </p>
+    <div class="flex-column pt-5">
+      <div class="flex flex-row">
+        <label class="text-sm" for="Comments">Comments</label>
+        
+      </div>
+      <div class="">
+        <input class="confirmcom" type="text" pInputText [(ngModel)]="inputValue" />
+      </div>
+      <div class="flex flex-row mt-5">
+        <!-- <p-button (click)="updateStatus(selectedRoom)" label="Confirm"></p-button> -->
+        <p-button label="Confirm"></p-button>
+      </div>
+     
+    </div>
+   
+
   </p-dialog>
 </div>
