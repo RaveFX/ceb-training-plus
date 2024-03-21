@@ -151,8 +151,85 @@
       "centre": "Kinchigune"
     }
   ],
-  
+
   "participantListApproval": [],
 
-  "resultApproval": []
+  "resultApproval": [],
+
+  "allowanceApproval": [],
+
+  "allowances": [
+    {
+      "id": "P001",
+      "name": "Training 001",
+      "participants": [
+        {
+          "id": 1,
+          "fullName": "viranga",
+          "jobRole": "Clerk",
+          "date_joined": "2009/08/21",
+          "email": "viranga@gmail.com",
+          "contact_number": "0768452655",
+          "allowance": 10000
+        },
+        {
+          "id": 2,
+          "fullName": "viranga",
+          "jobRole": "Clerk",
+          "date_joined": "2009/08/21",
+          "email": "viranga@gmail.com",
+          "contact_number": "0768452655",
+          "allowance": 10000
+        }
+      ]
+    },
+    {
+      "id": "P002",
+      "name": "Training 002",
+      "participants": [
+        {
+          "id": 1,
+          "fullName": "John Doe",
+          "jobRole": "Manager",
+          "date_joined": "2010/05/15",
+          "email": "john.doe@example.com",
+          "contact_number": "0712345678",
+          "allowance": 12000
+        },
+        {
+          "id": 2,
+          "fullName": "Jane Smith",
+          "jobRole": "Assistant",
+          "date_joined": "2011/02/20",
+          "email": "jane.smith@example.com",
+          "contact_number": "0776543210",
+          "allowance": 11000
+        }
+      ]
+    },
+    {
+      "id": "P003",
+      "name": "Training 003",
+      "participants": [
+        {
+          "id": 1,
+          "fullName": "Alice Johnson",
+          "jobRole": "Coordinator",
+          "date_joined": "2012/09/18",
+          "email": "alice.johnson@example.com",
+          "contact_number": "0755555555",
+          "allowance": 15000
+        },
+        {
+          "id": 2,
+          "fullName": "Bob Brown",
+          "jobRole": "Technician",
+          "date_joined": "2013/07/10",
+          "email": "bob.brown@example.com",
+          "contact_number": "0788888888",
+          "allowance": 13000
+        }
+      ]
+    }
+  ]
 }
