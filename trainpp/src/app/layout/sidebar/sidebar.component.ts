@@ -7,7 +7,8 @@ import {
 } from '@angular/core';
 import { to_sidebarData, dgm_sidebarData } from './nav-data';
 import { ISidebarData } from './helper';
-
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 interface SideNavToggle {
   screenWidth: number;
@@ -20,6 +21,8 @@ interface SideNavToggle {
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent implements OnInit {
+  constructor(private authService: AuthService, private router: Router) {}
+
   userName = sessionStorage.getItem('name');
   userEmail = sessionStorage.getItem('email');
   userRole = sessionStorage.getItem('role');
@@ -75,6 +78,13 @@ export class SidebarComponent implements OnInit {
     } else {
       this.navData = to_sidebarData;
     }
- }
-  
+  }
+
+  logout() {
+    // Clear authentication state (example: remove tokens)
+    this.authService.clearAuthState();
+
+    // Redirect to login page
+    this.router.navigate(['/login']);
+  }
 }

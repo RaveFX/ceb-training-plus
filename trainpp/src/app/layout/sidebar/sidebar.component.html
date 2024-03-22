@@ -34,7 +34,7 @@
       </li>
     </ul>
   </div>
-  <div class="userProfile">
+  <div class="userProfile" (click)="logout()">
     <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" />
     <div class="userDetails" *ngIf="collapsed">
         <div class="userName">{{userName}}</div>
