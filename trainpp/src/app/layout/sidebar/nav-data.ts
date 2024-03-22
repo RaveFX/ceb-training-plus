@@ -54,12 +54,12 @@ export const dgm_sidebarData: ISidebarData[] = [
     {
         label: 'Dashboard',
         icon: 'heroCog',
-        routeLink: '/home'
+        routeLink: '/dgm/home'
     },
     {
         label: 'Scorecard',
         icon: 'heroClipboard',
-        // routeLink: '/scorboard'
+        // routeLink: '/dgm/scorboard'
     },
     {
         label: 'Workbench',
@@ -69,7 +69,7 @@ export const dgm_sidebarData: ISidebarData[] = [
     {
         label: 'Canvas',
         icon: 'heroPencilSquare',
-        routeLink: '/canvas',
+        routeLink: '/dgm/canvas',
     },
     {
         label: 'Program List',
@@ -79,7 +79,7 @@ export const dgm_sidebarData: ISidebarData[] = [
     {
         label: 'Resource Management',
         icon: 'heroBuildingOffice2',
-        // routeLink: '/programlist',
+        // routeLink: '/dgm/programlist',
         items: [
             {
                 // routeLink: 'workbench/sub1',

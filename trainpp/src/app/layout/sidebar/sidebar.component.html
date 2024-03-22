@@ -18,7 +18,7 @@
     <hr>
     <ul class="sidenav-nav">
       <li class="sidenav-nav-item" *ngFor="let data of navData">
-        <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]" (click)="toggleSubmenu(data.label)">
+        <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleSubmenu(data.label)">
           <ng-icon class="sidenav-link-icon" [name]="data.icon ? data.icon : ''"></ng-icon>
           <span class="sidenav-link-text" *ngIf="collapsed">{{ data.label }}</span>
           <ng-icon class="toggleSubmenu-icon" [name]="submenuVisibility[data.label] ? 'heroChevronUp' : 'heroChevronDown'" *ngIf="data.items && collapsed"></ng-icon>
