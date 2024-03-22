@@ -21,4 +21,8 @@ export class AuthService {
     return this.http.get<User[]>(`${this.baseUrl}/users?email=${email}`);
   }
 
+  clearAuthState(){
+    localStorage.clear();
+  }
+
 }
