@@ -34,12 +34,13 @@
       </li>
     </ul>
   </div>
-  <div class="userProfile" (click)="logout()">
-    <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" />
+  <div class="userProfile">
+    <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" *ngIf="collapsed" />
     <div class="userDetails" *ngIf="collapsed">
         <div class="userName">{{userName}}</div>
         <div class="userEmail">{{userEmail}}</div>
     </div>
+    <i class="pi pi-sign-out ml-auto cursor-pointer" (click)="logout()"></i>
   </div>
 </div>
 

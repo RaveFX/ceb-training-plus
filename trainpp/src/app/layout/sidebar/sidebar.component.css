@@ -204,6 +204,8 @@
   background-color: #f1e7e8;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  align-items: center;
+  padding-right: 1rem !important;
 }
 
 .userDetails {
