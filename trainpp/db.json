@@ -162,6 +162,7 @@
               "name": "Building 4",
               "rooms": [
                 {
+                
                   "number": "401",
                   "capacity": 2,
                   "status": false,
@@ -171,7 +172,7 @@
                   "number": "402",
                   "capacity": 3,
                   "status": false,
-                  "comments": "here comes the comments"
+                  "comments": "here comes the commentss"
                 }
               ]
             }
