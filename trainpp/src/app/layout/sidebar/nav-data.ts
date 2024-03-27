@@ -85,6 +85,7 @@ export const dgm_sidebarData: ISidebarData[] = [
                 // routeLink: 'workbench/sub1',
                 label: 'Block',
                 icon: 'heroNoSymbol',
+                routeLink: '/dgm/blockhostel',
 
             },
         ]

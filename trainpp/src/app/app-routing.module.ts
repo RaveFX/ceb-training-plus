@@ -11,6 +11,7 @@ import { ProgramListDgmComponent } from './pages/program-list-dgm/program-list-d
 import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
 import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-results-dgm.component';
 import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
+import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,8 @@ const routes: Routes = [
       {
         path: 'allowance',
         component: ApproveAllowanceDgmComponent
+        path: 'blockhostel',
+        component: BlockHostelDgmComponent
       }
     ]
   },

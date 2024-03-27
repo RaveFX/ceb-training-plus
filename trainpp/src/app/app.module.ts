@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 import { MenuModule } from 'primeng/menu';
+import { TabViewModule } from 'primeng/tabview';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import {
   heroCog,
@@ -51,6 +52,10 @@ import {
   heroBuildingOffice,
   heroTrash
 } from '@ng-icons/heroicons/outline';
+import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, 
+        heroXCircle, heroChevronLeft, heroChevronDown,heroChevronUp, heroChevronRight, 
+        heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, 
+        heroBuildingOffice2, heroNoSymbol, heroBuildingOffice} from '@ng-icons/heroicons/outline';
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
@@ -65,6 +70,12 @@ import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-
 import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
 import { AccordionModule } from 'primeng/accordion';
 import { ChipModule } from 'primeng/chip';
+import { ContentComponent } from './pages/block-hostel-dgm/content/content.component';
+import { BlockconfirmComponent } from './pages/block-hostel-dgm/blockconfirm/blockconfirm.component';
+import { DialogModule } from 'primeng/dialog';
+import { ChipModule } from 'primeng/chip';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+
 
 @NgModule({
   declarations: [
@@ -85,6 +96,8 @@ import { ChipModule } from 'primeng/chip';
     ProgramListConfirmDgmComponent,
     ApproveResultsDgmComponent,
     ApproveAllowanceDgmComponent,
+    ContentComponent,
+    BlockconfirmComponent
   ],
   imports: [
     BrowserModule,
@@ -132,6 +145,13 @@ import { ChipModule } from 'primeng/chip';
       heroBuildingOffice,
       heroTrash
     }),
+    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, 
+      heroXCircle, heroChevronLeft, heroChevronDown, heroChevronUp, heroChevronRight, 
+      heroQueueList, heroUserPlus, heroListBullet, heroCheckBadge, heroBuildingOffice2, heroNoSymbol, heroBuildingOffice}),
+      DialogModule,
+      ChipModule,
+      InputTextareaModule
+
   ],
   providers: [provideClientHydration(), MessageService],
   bootstrap: [AppComponent],
