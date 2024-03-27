@@ -30,26 +30,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 import { MenuModule } from 'primeng/menu';
-import { TabViewModule } from 'primeng/tabview';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import {
-  heroCog,
-  heroHome,
-  heroClipboard,
-  heroBriefcase,
-  heroPencilSquare,
-  heroXCircle,
-  heroChevronLeft,
-  heroChevronDown,
-  heroChevronUp,
-  heroChevronRight,
-  heroQueueList,
-  heroUserPlus,
-  heroListBullet,
-  heroCheckBadge,
-  heroBuildingOffice2,
-  heroNoSymbol,
-  heroBuildingOffice,
   heroTrash
 } from '@ng-icons/heroicons/outline';
 import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, 
@@ -62,7 +44,6 @@ import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-
 import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
 import { ProgramListDgmComponent } from './pages/program-list-dgm/program-list-dgm.component';
 import { TabViewModule } from 'primeng/tabview';
-import { ContentComponent } from './pages/program-list-dgm/content/content.component';
 import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program-list-confirm-dgm/program-list-confirm-dgm.component';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
@@ -72,9 +53,6 @@ import { AccordionModule } from 'primeng/accordion';
 import { ChipModule } from 'primeng/chip';
 import { ContentComponent } from './pages/block-hostel-dgm/content/content.component';
 import { BlockconfirmComponent } from './pages/block-hostel-dgm/blockconfirm/blockconfirm.component';
-import { DialogModule } from 'primeng/dialog';
-import { ChipModule } from 'primeng/chip';
-import { InputTextareaModule } from 'primeng/inputtextarea';
 
 
 @NgModule({

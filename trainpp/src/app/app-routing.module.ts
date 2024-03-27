@@ -63,6 +63,9 @@ const routes: Routes = [
       {
         path: 'allowance',
         component: ApproveAllowanceDgmComponent
+      },
+
+      {
         path: 'blockhostel',
         component: BlockHostelDgmComponent
       }
