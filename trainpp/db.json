@@ -5,14 +5,14 @@
       "email": "viranga@gmail.com",
       "password": "1234",
       "role": "DGM",
-      "id": 1
+      "id": "1"
     },
     {
       "fullName": "ravindu",
       "email": "ravindu@gmail.com",
       "password": "1234",
       "role": "TO",
-      "id": 2
+      "id": "2"
     }
   ],
   "tasks": [
@@ -161,13 +161,15 @@
       "centre": "Kinchigune"
     }
   ],
-
   "participantListApproval": [],
-
-  "resultApproval": [],
-
+  "resultApproval": [
+    {
+      "id": 739,
+      "programId": "P001",
+      "isApproved": true
+    }
+  ],
   "allowanceApproval": [],
-
   "allowances": [
     {
       "id": "P001",
@@ -242,7 +244,6 @@
       ]
     }
   ],
-
   "locations": [
     {
       "name": "Piliyandala",
@@ -318,14 +319,13 @@
       "id": "2",
       "hostels": [
         {
-          "hostelId" : "2.1",
+          "hostelId": "2.1",
           "name": "Hostel C",
           "buildings": [
             {
               "name": "Building 4",
               "rooms": [
                 {
-                
                   "number": "401",
                   "capacity": 2,
                   "status": false,
@@ -348,7 +348,7 @@
       "id": "3",
       "hostels": [
         {
-          "hostelId" : "3.1",
+          "hostelId": "3.1",
           "name": "Hostel D",
           "buildings": [
             {
@@ -377,7 +377,7 @@
       "id": "4",
       "hostels": [
         {
-          "hostelId" : "4.1",
+          "hostelId": "4.1",
           "name": "Hostel E",
           "buildings": [
             {
