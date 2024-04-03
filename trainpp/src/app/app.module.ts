@@ -65,6 +65,8 @@ import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-
 import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
 import { AccordionModule } from 'primeng/accordion';
 import { ChipModule } from 'primeng/chip';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ImageModule } from 'primeng/image';
 
 @NgModule({
   declarations: [
@@ -85,6 +87,7 @@ import { ChipModule } from 'primeng/chip';
     ProgramListConfirmDgmComponent,
     ApproveResultsDgmComponent,
     ApproveAllowanceDgmComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -112,6 +115,7 @@ import { ChipModule } from 'primeng/chip';
     InputTextareaModule,
     AccordionModule,
     ChipModule,
+    ImageModule,
     NgIconsModule.withIcons({
       heroCog,
       heroHome,
