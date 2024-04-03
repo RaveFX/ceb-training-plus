@@ -1,7 +1,7 @@
 <p-card header="My Profile">
   <div class="border mb-3 p-3 flex flex-row">
     <div class="flex flex-row gap-4 align-items-center">
-      <p-image src="https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg" alt="Image" width="250"
+      <p-image src="{{ user.proPic }}" alt="Image" width="250"
         [preview]="true"></p-image>
       <div class="flex flex-column">
         <span class="font-semibold">{{user.fullName}}</span>
@@ -32,7 +32,7 @@
     </div>
     <div class="flex flex-column mb-2">
       <label>Telephone No. :</label>
-      <span class="font-semibold">0764444444</span>
+      <span class="font-semibold">{{user.tpNo}}</span>
     </div>
     <div class="flex flex-column mb-2">
       <label>Role :</label>

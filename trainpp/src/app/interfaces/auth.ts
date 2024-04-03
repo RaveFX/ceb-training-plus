@@ -1,7 +1,9 @@
 export interface User {
-    id: string;
-    fullName: string;
-    email: string;
-    role: string;
-    password: string;
+  fullName: string;
+  email: string;
+  password: string;
+  role: string;
+  id: string;
+  tpNo: string;
+  proPic: string;
 }

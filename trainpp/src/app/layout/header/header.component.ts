@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   role: string | null = sessionStorage.getItem('role');
+  proPic: string | null = sessionStorage.getItem('proPic');
   profileLink: string = "";
 
   constructor() {
