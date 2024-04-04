@@ -203,6 +203,8 @@ import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-
 import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
 import { AccordionModule } from 'primeng/accordion';
 import { ChipModule } from 'primeng/chip';
+import { ProgramListToComponent } from './pages/program-list-to/program-list-to.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -223,6 +225,7 @@ import { ChipModule } from 'primeng/chip';
     ProgramListConfirmDgmComponent,
     ApproveResultsDgmComponent,
     ApproveAllowanceDgmComponent,
+    ProgramListToComponent,
   ],
   imports: [
     BrowserModule,
@@ -271,7 +274,7 @@ import { ChipModule } from 'primeng/chip';
       heroTrash
     }),
   ],
-  providers: [provideClientHydration(), MessageService],
+  providers: [provideHttpClient(withFetch()),provideClientHydration(), MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

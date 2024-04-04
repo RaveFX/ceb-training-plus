@@ -12,6 +12,8 @@ import { ProgramListConfirmDgmComponent } from './pages/program-list-dgm/program
 import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-results-dgm.component';
 import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
 import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
+import { ProgramListToComponent } from './pages/program-list-to/program-list-to.component';
+
 
 const routes: Routes = [
   {
@@ -91,6 +93,10 @@ const routes: Routes = [
       {
         path: 'programlist',
         component: ProgramListComponent
+      },
+      {
+        path: 'programlistto',
+        component: ProgramListToComponent
       },
     ]
   }

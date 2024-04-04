@@ -27,6 +27,12 @@ export const to_sidebarData: ISidebarData[] = [
         routeLink: '/to/programlist',
     },
     {
+        label: 'Program List TO',
+        icon: 'heroQueueList',
+        routeLink: '/to/programlistto',
+    },
+
+    {
         label: 'Attendance Management',
         icon: 'heroUserPlus',
         // routeLink: '/login',
