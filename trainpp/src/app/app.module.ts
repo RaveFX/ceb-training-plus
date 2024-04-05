@@ -205,6 +205,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { ChipModule } from 'primeng/chip';
 import { ProgramListToComponent } from './pages/program-list-to/program-list-to.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { ProgramListConfirmToComponent } from './pages/program-list-to/program-list-confirm-to/program-list-confirm-to.component';
 
 @NgModule({
   declarations: [
@@ -226,6 +227,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     ApproveResultsDgmComponent,
     ApproveAllowanceDgmComponent,
     ProgramListToComponent,
+    ProgramListConfirmToComponent,
   ],
   imports: [
     BrowserModule,
