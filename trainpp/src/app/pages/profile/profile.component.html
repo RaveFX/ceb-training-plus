@@ -1,42 +1,78 @@
-<p-card header="My Profile">
-  <div class="border mb-3 p-3 flex flex-row">
-    <div class="flex flex-row gap-4 align-items-center">
-      <p-image src="{{ user.proPic }}" alt="Image" width="250"
-        [preview]="true"></p-image>
-      <div class="flex flex-column">
+<div class="container" [class.dim-overlay]="visible">
+  <p-card header="My Profile">
+    <div class="border mb-3 p-3 flex flex-row">
+      <div class="flex flex-row gap-4 align-items-center">
+        <p-image src="{{ user.proPic }}" alt="Image" width="250" [preview]="true"></p-image>
+        <div class="flex flex-column">
+          <span class="font-semibold">{{user.fullName}}</span>
+          <span>{{user.role}}</span>
+        </div>
+      </div>
+      <p-button (click)="showDPChangeDialog()" size="small" [rounded]="true" [outlined]="true" severity="secondary"
+        icon="pi pi-pencil" label="Edit" class="ml-auto"></p-button>
+    </div>
+
+    <div class="border flex flex-column gap-2 p-3">
+      <div class="flex flex-row">
+        <h3>Personal Information</h3>
+        <p-button (click)="showDialog()" size="small" [rounded]="true" [outlined]="true" severity="secondary"
+          icon="pi pi-pencil" label="Edit" class="ml-auto"></p-button>
+      </div>
+      <div class="flex flex-column mb-2">
+        <label>EPF No. :</label>
+        <span class="font-semibold">{{id}}</span>
+      </div>
+      <div class="flex flex-column mb-2">
+        <label>Name :</label>
         <span class="font-semibold">{{user.fullName}}</span>
-        <span>{{user.role}}</span>
+      </div>
+      <div class="flex flex-column mb-2">
+        <label>Email :</label>
+        <span class="font-semibold">{{user.email}}</span>
+      </div>
+      <div class="flex flex-column mb-2">
+        <label>Telephone No. :</label>
+        <span class="font-semibold">{{user.tpNo}}</span>
+      </div>
+      <div class="flex flex-column mb-2">
+        <label>Role :</label>
+        <span class="font-semibold">{{user.role}}</span>
       </div>
     </div>
-    <p-button size="small" [rounded]="true" [outlined]="true" severity="secondary" icon="pi pi-pencil" label="Edit"
-      class="ml-auto"></p-button>
-  </div>
+  </p-card>
 
-  <div class="border flex flex-column gap-2 p-3">
-    <div class="flex flex-row">
-      <h3>Personal Information</h3>
-      <p-button size="small" [rounded]="true" [outlined]="true" severity="secondary" icon="pi pi-pencil" label="Edit"
-        class="ml-auto"></p-button>
+  <p-dialog header="Edit Personal Details" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }"
+    [style]="{ width: '30vw' }" [draggable]="false" [resizable]="false">
+    <div class="flex flex-column gap-2">
+      <div class="flex flex-column gap-2">
+        <label for="epfNo">EPF No.</label>
+        <input type="text" pInputText placeholder={{id}} disabled />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="name">Name</label>
+        <input type="text" pInputText placeholder={{user.fullName}} disabled />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="email">Email</label>
+        <input type="text" pInputText [(ngModel)]="email" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="tpNo">T.P No.</label>
+        <input type="text" pInputText [(ngModel)]="tpNo" />
+      </div>
+      <div class="flex flex-column gap-2">
+        <label for="role">Role</label>
+        <input type="text" pInputText placeholder={{user.role}} disabled />
+      </div>
+      <div class="flex gap-2 justify-content-end">
+        <p-button label="Reset" size="small" severity="secondary"></p-button>
+        <p-button label="Change" size="small" (click)="submitChanges()"></p-button>
+      </div>
     </div>
-    <div class="flex flex-column mb-2">
-      <label>EPF No. :</label>
-      <span class="font-semibold">{{id}}</span>
-    </div>
-    <div class="flex flex-column mb-2">
-      <label>Name :</label>
-      <span class="font-semibold">{{user.fullName}}</span>
-    </div>
-    <div class="flex flex-column mb-2">
-      <label>Email :</label>
-      <span class="font-semibold">{{user.email}}</span>
-    </div>
-    <div class="flex flex-column mb-2">
-      <label>Telephone No. :</label>
-      <span class="font-semibold">{{user.tpNo}}</span>
-    </div>
-    <div class="flex flex-column mb-2">
-      <label>Role :</label>
-      <span class="font-semibold">{{user.role}}</span>
-    </div>
-  </div>
-</p-card>
+  </p-dialog>
+
+  <p-dialog header="Edit Personal Details" [(visible)]="visibleDP" [breakpoints]="{ '960px': '75vw' }"
+    [style]="{ width: '30vw' }" [draggable]="false" [resizable]="false">
+    
+  </p-dialog>
+</div>

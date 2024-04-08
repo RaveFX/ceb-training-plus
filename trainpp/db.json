@@ -6,7 +6,7 @@
       "password": "1234",
       "role": "DGM",
       "id": "1",
-      "tpNo": "0778542563",
+      "tpNo": "0778548564",
       "proPic": "https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
     },
     {
@@ -168,7 +168,7 @@
   "participantListApproval": [],
   "resultApproval": [
     {
-      "id": 739,
+      "id": "739",
       "programId": "P001",
       "isApproved": true
     }
