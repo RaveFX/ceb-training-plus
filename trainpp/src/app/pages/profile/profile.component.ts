@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../interfaces/auth';
 import { MessageService } from 'primeng/api';
+import { FileUploadEvent } from 'primeng/fileupload';
 
 @Component({
   selector: 'app-profile',
@@ -16,10 +17,12 @@ export class ProfileComponent implements OnInit {
   email: string | null = null;
   tpNo: string | null = null;
 
+  uploadedFiles: any[] = [];
+
   constructor(
     private userService: UserService,
     private msgService: MessageService
-    ) {}
+  ) {}
 
   ngOnInit(): void {
     this.id = sessionStorage.getItem('id');
@@ -42,11 +45,11 @@ export class ProfileComponent implements OnInit {
     const data = {
       id: this.user.id,
       email: this.email,
-      tpNo: this.tpNo
+      tpNo: this.tpNo,
     };
 
     this.userService.updateUser(data as User).subscribe(
-      response => { 
+      (response) => {
         this.visible = false;
         console.log(response);
         this.msgService.add({
@@ -58,7 +61,7 @@ export class ProfileComponent implements OnInit {
         this.email = '';
         this.tpNo = '';
       },
-      error => {
+      (error) => {
         console.log(error);
         this.msgService.add({
           severity: 'error',
@@ -66,7 +69,21 @@ export class ProfileComponent implements OnInit {
           detail: 'Update details Failed',
         });
       }
-    )
+    );
+  }
+
+  onUpload(event: FileUploadEvent) {
+    // for (let file of event.files) {
+    //   this.uploadedFiles.push(file);
+    // }
+
+    // this.msgService.add({
+    //   severity: 'info',
+    //   summary: 'File Uploaded',
+    //   detail: '',
+    // });
+
+    console.log(event);
   }
 
   showDialog() {
