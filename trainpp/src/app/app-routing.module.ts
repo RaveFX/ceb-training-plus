@@ -13,6 +13,7 @@ import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-
 import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
 import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { AttendanceToComponent } from './pages/attendance-to/attendance-to.component';
 
 const routes: Routes = [
   {
@@ -99,6 +100,10 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent
+      },
+      {
+        path: 'attendance',
+        component: AttendanceToComponent
       }
     ]
   }

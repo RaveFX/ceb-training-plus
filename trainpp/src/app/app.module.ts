@@ -206,6 +206,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { ChipModule } from 'primeng/chip';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ImageModule } from 'primeng/image';
+import { AttendanceToComponent } from './pages/attendance-to/attendance-to.component';
 
 @NgModule({
   declarations: [
@@ -227,6 +228,7 @@ import { ImageModule } from 'primeng/image';
     ApproveResultsDgmComponent,
     ApproveAllowanceDgmComponent,
     ProfileComponent,
+    AttendanceToComponent,
   ],
   imports: [
     BrowserModule,

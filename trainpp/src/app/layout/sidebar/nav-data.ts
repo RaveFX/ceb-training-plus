@@ -32,7 +32,7 @@ export const to_sidebarData: ISidebarData[] = [
         // routeLink: '/login',
         items: [
             {
-                // routeLink: 'workbench/sub1',
+                routeLink: '/to/attendance',
                 label: 'View Attendance',
                 icon: 'heroListBullet',
 
