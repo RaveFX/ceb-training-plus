@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Program, PROGRAMS } from './data/trainings-data';
 import { States } from './data/others';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-program-request-dgm',
@@ -10,6 +11,8 @@ import { States } from './data/others';
 export class ProgramRequestDGMComponent implements OnInit {
   programs: Program[] = PROGRAMS;
   statuses!: any[];
+  visible: boolean = false;
+
   onStatusChange(selectedValues: any[]) {
     console.log('Selected Status Values:', selectedValues);
     // Other logic if needed
@@ -33,5 +36,9 @@ export class ProgramRequestDGMComponent implements OnInit {
       { label: 'Pending', value: 'pending' },
     ];
   }
+
+  showDialog() {
+    this.visible = true;
+ }
 
 }

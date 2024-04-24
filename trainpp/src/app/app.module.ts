@@ -32,6 +32,8 @@ import { heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, hero
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
 import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-request-dgm.component';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 
 @NgModule({
@@ -69,8 +71,9 @@ import { ProgramRequestDGMComponent } from './pages/program-request-dgm/program-
     DropdownModule,
     MenuModule,
     PanelMenuModule,
-    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle})
-
+    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle}),
+    DialogModule,
+    InputTextareaModule,
 
   ],
   providers: [
