@@ -1,5 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
-@import "primeng/resources/themes/lara-light-blue/theme.css";
+/* @import "primeng/resources/themes/lara-light-blue/theme.css"; */
+@import "./assets/theme/theme.css";
 @import "primeng/resources/primeng.min.css";
 @import "primeflex/primeflex.css";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  --yellow: #FFD400;
+  --brown: #720F11;
+  --red: #FF4C3B;
+  --darkAsh: #4A4947;
+  --primary-color: #4A4947;
+}
+
+.container.dim-overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1000; /* Ensure the overlay is above other content */
+}

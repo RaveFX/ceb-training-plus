@@ -1,0 +1,62 @@
+<p-card header="Program Requests">
+    <p-table #dt1 styleClass="p-datatable-striped" [value]="programs" [tableStyle]="{ 'min-width': '50rem', 'margin': 0 }"
+      [paginator]="true" [rows]="5" [globalFilterFields]="['name', 'targetGroup', 'statuses.status', 'status']">
+      <ng-template pTemplate="caption">
+        <div class="flex justify-content-between">
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value || '', 'contains')"
+              placeholder="Search keyword" />
+          </span>
+          <p-button label="Reject" severity="danger" class="p-button-sm"></p-button>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 4rem">
+            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+          </th>
+          <th pSortableColumn="name">Program type<p-sortIcon field="name"></p-sortIcon>
+          </th>
+          <th pSortableColumn="details">Details<p-sortIcon field="details"></p-sortIcon>
+          </th>
+          <th pSortableColumn="targetGroup">Target Group<p-sortIcon field="targetGroup"></p-sortIcon>
+          </th>
+          <th pSortableColumn="branch">Branch<p-sortIcon field="branch"></p-sortIcon>
+          </th>
+          <th>Action</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-program>
+        <tr>
+          <td>
+            <p-tableCheckbox [value]="program"></p-tableCheckbox>
+          </td>
+          <td>{{ program.name }}</td>
+          <td>{{ program.details }}</td>
+          <td>{{ program.targetGroup }}</td>
+          <td>{{ program.branch }}</td>
+          <td>
+            <button pButton style="margin-right: 10px;" class="forward-button" (click)="showDialog()">Forward to HODs</button>
+            <p-button severity="danger"size="small" class="reject-button">Reject</p-button>
+          </td>  
+        </tr>
+      </ng-template>
+    </p-table>
+    <p-dialog header="Header" [(visible)]="visible" [modal]="true" [style]="{ width: '50rem' }" [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+      <ng-template pTemplate="header">
+          <div class="inline-flex align-items-center justify-content-center gap-2">
+              <span class="font-bold white-space-nowrap">Confirm Approval</span>
+          </div>
+      </ng-template>
+      <span class="p-float-label">
+        <textarea id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+        <label for="float-input">Comments</label>
+    </span>
+      <ng-template pTemplate="footer">
+          <p-button icon="pi pi-check" (click)="visible = false" label="Forward to HODs" pAutoFocus [autofocus]="true"></p-button>
+      </ng-template>
+   </p-dialog>    
+  </p-card>
+  
+  

@@ -1,0 +1,32 @@
+/* Decrease button size */
+.p-button {
+    font-size: 12px;
+    padding: 5px 20px;
+    background-color: var(--darkAsh);
+  }
+
+  .p-button-label {
+    font-size: 12px;
+  }
+  
+  * {
+    font-size: small;
+  }
+
+  /* .hod-button {
+    background-color: yellow;
+  } */
+
+  /* In your-component.component.css */
+.forward-button {
+    padding: 6px 12px; /* Adjust padding for size */
+    font-size: 14px; /* Adjust font size */
+   }
+   
+   .reject-button {
+    padding: 8px 16px; /* Adjust padding for size */
+    font-size: 16px; /* Adjust font size */
+   }
+   
+
+  

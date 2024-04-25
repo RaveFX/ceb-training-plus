@@ -1,0 +1,38 @@
+{
+
+
+"hostels":[
+
+
+
+
+    {
+      "roomid":"R001",
+      "location":"piliyandala",
+      "building":"building 01",
+      "bedCount":"2",
+      "status":"blocked"
+    },
+    {
+      "roomid":"R002",
+      "location":"kinchigune",
+      "building":"building 01",
+      "bedCount":"2",
+      "status":"free"
+    },
+    {
+      "roomid":"R004",
+      "location":"kalawana",
+      "building":"building 01",
+      "bedCount":"2",
+      "status":"blocked"
+    },
+    {
+      "roomid":"R003",
+      "location":"castlereigh",
+      "building":"building 01",
+      "bedCount":"2",
+      "status":"free"
+    }
+  ]
+}

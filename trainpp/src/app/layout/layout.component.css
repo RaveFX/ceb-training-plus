@@ -1,0 +1,13 @@
+.container {
+    padding: 1rem;
+}
+
+.size-lg {
+    width:20rem;
+    transition: all .3s ease;
+}
+
+.size-sm {
+    width: 5rem;
+    transition: all .3s ease;
+}

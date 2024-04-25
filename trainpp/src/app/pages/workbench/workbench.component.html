@@ -1,0 +1,33 @@
+<p-card header="Workbench">
+  <p-table #dt1 styleClass="p-datatable-striped" [value]="tasks" [tableStyle]="{ 'min-width': '50rem', 'margin': 0 }"
+    [paginator]="true" [rows]="5" [globalFilterFields]="['task']">
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value || '', 'contains')" placeholder="Search keyword" />
+        </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 4rem">
+            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th pSortableColumn="task">Task<p-sortIcon field="task"></p-sortIcon></th>
+        <th pSortableColumn="rDate">Received Date<p-sortIcon field="rDate"></p-sortIcon></th>
+        <th>Action</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-task>
+      <tr>
+        <td>
+            <p-tableCheckbox [value]="task"></p-tableCheckbox>
+        </td>
+        <td>{{ task.task }}</td>
+        <td>{{ task.rDate }}</td>
+        <td><a href="{{ task.link }}"><p-button size="small" severity="secondary">View</p-button></a></td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>

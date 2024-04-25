@@ -1,1 +1,54 @@
-<p>login works!</p>
+<div class="mt-5 flex-column justify-content-center align-items-center h-full">
+    <div class="flex justify-content-center align-items-center mb-5">
+        <div class="flex-row">
+            <p-avatar image="https://i.imgur.com/8bJCn4e.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
+        </div>
+        <div class="flex-row ">
+            <h2 class="p-0 m-0">Training ++</h2>
+            <p class="p-0 m-0">CEB Training Management System</p>
+        </div>
+    
+    
+    </div>
+    
+    <form class="flex justify-content-center" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    
+        <p-card styleClass="p-2 surface-ground border-black-alpha-30" header="Login" [style]="{width:'400px'}">
+            <div class="field">
+                <label class="text-sm" for="email">Email</label>
+                <input type="text" pInputText formControlName="email" class="w-full" name="email"
+                    placeholder="Type your email" />
+                <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+                    <div *ngIf="email.errors?.['required']"> Email is required.</div>
+                    <div *ngIf="email.errors?.['email']"> Email is not valid.</div>
+                </small>
+            </div>
+            <div class="field">
+                <label class="text-sm" for="password">Password</label>
+                <input  type="password" pInputText formControlName="password" class="w-full" name="password"
+                    placeholder="Type your password" />
+                <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+                    <div *ngIf="password.errors?.['required']"> Password is required.</div>
+                </small>
+            </div>
+            <p class="text-right text-xs mb-5">Forgot Password? <a routerLink="/register">Reset</a></p>
+            <p-button 
+                label="SIGN IN" 
+                styleClass="w-full bg-yellow-400 border-none text-color " 
+                [disabled]="loginForm.invalid"
+                type="submit"
+                
+                >
+            </p-button>
+            <p class="text-center text-xs">By signing in, you agree to our <a routerLink="/register">Privacy Policy</a></p>
+        </p-card>
+    
+    </form>
+
+    
+    <footer>
+        <div class="mt-5 mb-o"><p class="text-center ">Copyright (C) 2024 Ceylon Electricity Board</p>
+        </div>
+
+    </footer>
+</div>

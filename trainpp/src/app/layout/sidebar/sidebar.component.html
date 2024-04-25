@@ -1,0 +1,51 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : '' ">
+  <div>
+    <div class="logo-container">
+      <img class="logo" src="https://i.imgur.com/8bJCn4e.png" alt="logo" (click)="toggleCollapse()">
+      <div class="logo-text" *ngIf="collapsed">
+        <span class="logo-text-main">Training++</span>
+        <span class="logo-text-sub">CEB Training Management System</span>
+      </div>
+      <!-- <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
+          <ng-icon name="heroXCircle" class="closeIcon"></ng-icon>
+        </button> -->
+    </div>
+    <div class="userRole">
+      <div class="userRole-icon">{{userRole}}</div>
+      <div class="userRole-text" *ngIf="collapsed && userRole === 'TO'">Training Officer</div>
+      <div class="userRole-text" *ngIf="collapsed && userRole === 'DGM'">Deputy General Manager</div>
+    </div>
+    <hr>
+    <ul class="sidenav-nav">
+      <li class="sidenav-nav-item" *ngFor="let data of navData">
+        <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleSubmenu(data.label)">
+          <ng-icon class="sidenav-link-icon" [name]="data.icon ? data.icon : ''"></ng-icon>
+          <span class="sidenav-link-text" *ngIf="collapsed">{{ data.label }}</span>
+          <ng-icon class="toggleSubmenu-icon" [name]="submenuVisibility[data.label] ? 'heroChevronUp' : 'heroChevronDown'" *ngIf="data.items && collapsed"></ng-icon>
+        </a>
+        <ul class="sidebar-submenu" *ngIf="data.items && collapsed && submenuVisibility[data.label]">
+          <li class="sidebar-sub-item" *ngFor="let data of data.items">
+            <a href="" class="sidebar-sub-navlink" [routerLink]="[data.routeLink]">
+              <ng-icon class="sidenav-link-icon" [name]="data.icon ? data.icon : ''"></ng-icon>
+              <span class="sidenav-link-text" *ngIf="collapsed">{{ data.label }}</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="userProfile">
+    <p-avatar image={{proPic}} shape="circle" *ngIf="collapsed" />
+    <div class="userDetails" *ngIf="collapsed">
+        <div class="userName">{{userName}}</div>
+        <div class="userEmail">{{userEmail}}</div>
+    </div>
+    <i class="pi pi-sign-out ml-auto cursor-pointer" (click)="logout()"></i>
+  </div>
+</div>
+
+<div class="collapse-btn-container" [ngClass]="collapsed ? 'collapsed-btn' : '' ">
+  <div class="btn-container" (click)="toggleCollapse()">
+    <ng-icon [name]="collapsed ? 'heroChevronLeft' : 'heroChevronRight'" class="collapse-btn"></ng-icon>
+  </div>
+</div>

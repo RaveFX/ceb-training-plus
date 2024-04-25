@@ -1,0 +1,10 @@
+/* Decrease button size */
+/* .p-button {
+  font-size: 12px;
+  padding: 5px 20px;
+  background-color: var(--darkAsh);
+} */
+
+* {
+  font-size: small;
+}

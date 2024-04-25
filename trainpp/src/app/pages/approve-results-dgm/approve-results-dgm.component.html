@@ -1,0 +1,122 @@
+<div class="container" [class.dim-overlay]="visible_results || visible_approval">
+  <p-card header="{{program.name}}">
+    <div class="flex-row">
+      <div class="font-semibold" style="font-size: 1.1rem">Coordinated by :</div>
+      <div class="flex flex-row align-items-centerr mt-2 ml-5">
+        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" styleClass="mr-2"
+          size="large" shape="circle"></p-avatar>
+        <span class="font-medium">{{program.project_manager}}</span>
+      </div>
+    </div>
+
+    <!-- data table -->
+    <p-table #dt1 styleClass="p-datatable-striped" [value]="results"
+      [tableStyle]="{ 'min-width': '50rem', 'margin': 0 }" [paginator]="true" [rows]="5"
+      [globalFilterFields]="['name', 'epf_no']">
+      <ng-template pTemplate="caption">
+        <div class="flex justify-content-between align-items-end">
+          <div class="flex flex-column">
+            <span style="font-size: 1.2rem">Result List</span>
+            <span class="p-input-icon-left mt-2">
+              <i class="pi pi-search"></i>
+              <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value || '', 'contains')"
+                placeholder="Search keyword" />
+            </span>
+          </div>
+          <p-button (click)="showDialog()" label="Approve" class="button" size="small"></p-button>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 4rem">
+            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+          </th>
+          <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon>
+          </th>
+          <th pSortableColumn="epf_no">EPF.NO.<p-sortIcon field="epf_no"></p-sortIcon>
+          </th>
+          <th pSortableColumn="overall_result">Overall Results<p-sortIcon field="overall_result"></p-sortIcon>
+          </th>
+          <th>View</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-result>
+        <tr>
+          <td>
+            <p-tableCheckbox [value]="result"></p-tableCheckbox>
+          </td>
+          <td>{{ result.name }}</td>
+          <td>{{ result.epf_no }}</td>
+          <td>{{ result.overall_result}}</td>
+          <td>
+            <p-button (click)="viewFullDetails(result)" severity="secondary" label="View" size="small"></p-button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+
+
+
+  <!-- View Result Dialog*********************************************************** -->
+  <p-dialog header="Result Sheet" [(visible)]="visible_results" [breakpoints]="{ '960px': '75vw' }"
+    [style]="{ width: '40vw' }" [draggable]="false" [resizable]="false">
+    <ng-template pTemplate="header">
+      <div>
+        <span class="font-bold white-space-nowrap" style="font-size: x-large;">Result Sheet</span>
+        <span class="font-semibold" style="font-size: large;">- {{program.name}}</span>
+      </div>
+    </ng-template>
+    <div class="ml-3">
+      <div class="mb-2">
+        <label for="name" class="font-semibold">Name : </label>
+        <span>{{ selectedResult?.name }}</span>
+      </div>
+      <div class="mb-2">
+        <label for="epf_no" class="font-semibold">EPF.NO. : </label>
+        <span>{{ selectedResult?.epf_no }}</span>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="selectedResult">
+      <p-table [value]="selectedResult.results" [tableStyle]="{ 'min-width': '30rem' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Subject</th>
+            <th>Result</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-result>
+          <tr>
+            <td>{{ result.sName }}</td>
+            <td>{{ result.result }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <ng-template pTemplate="footer">
+      <p-button label="Close" (click)="closeDialog()" pAutoFocus [autofocus]="true" size="small"></p-button>
+    </ng-template>
+  </p-dialog>
+  <!-- End********************************************************************************************************************************** -->
+
+  <!-- View Approval Dialog*********************************************************** -->
+  <p-dialog header="Header" [(visible)]="visible_approval" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '40vw' }"
+    [draggable]="false" [resizable]="false">
+    <ng-template pTemplate="header">
+      <div class="flex flex-column">
+        <span class="font-bold white-space-nowrap" style="font-size: x-large;">Confirm Results Approval</span>
+        <span class="font-semibold white-space-nowrap">{{program.name}}</span>
+      </div>
+    </ng-template>
+    <label for="comments">Enter Comments:</label><br>
+    <textarea rows="5" class="w-full" pInputTextarea [(ngModel)]="value"></textarea>
+    <ng-template pTemplate="footer">
+      <p-button icon="pi pi-check" label="Confirm" pAutoFocus [autofocus]="true"
+        (click)="submitFormData()" size="small"></p-button>
+    </ng-template>
+  </p-dialog>
+  <!-- End********************************************************************************************************************************** -->
+
+</div>

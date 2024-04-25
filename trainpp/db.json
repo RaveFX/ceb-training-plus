@@ -1,0 +1,409 @@
+{
+  "users": [
+    {
+      "fullName": "Viranga Jayarathne",
+      "email": "viranga@gmail.com",
+      "password": "1234",
+      "role": "DGM",
+      "id": "1",
+      "tpNo": "0778548564",
+      "proPic": "https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+    },
+    {
+      "fullName": "Ravindu Balasooriya",
+      "email": "ravindu@gmail.com",
+      "password": "1234",
+      "role": "TO",
+      "id": "2",
+      "tpNo": "0778548563",
+      "proPic": "https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "P001",
+      "task": "Launch program : Training 001",
+      "rDate": "2024/02/27",
+      "role": "TO",
+      "link": "/to/#"
+    },
+    {
+      "id": "P002",
+      "task": "Recommend trainee list - Training 001",
+      "rDate": "2024/02/26",
+      "role": "TO",
+      "link": "/to/#"
+    },
+    {
+      "id": "P003",
+      "task": "New Program Request - Forwarded from DGM",
+      "rDate": "2024/02/25",
+      "role": "TO",
+      "link": "/to/#"
+    },
+    {
+      "id": "P004",
+      "task": "Recommend Leave - A.E. Edirimanne.",
+      "rDate": "2024/02/24",
+      "role": "TO",
+      "link": "/to/#"
+    },
+    {
+      "id": "P005",
+      "task": "Recommend trainee allowance",
+      "rDate": "2024/02/26",
+      "role": "TO",
+      "link": "/to/#"
+    },
+    {
+      "id": "P006",
+      "task": "Approve/ Reject training/exam participant list",
+      "rDate": "2024/02/26",
+      "role": "DGM",
+      "link": "/dgm/programlist"
+    },
+    {
+      "id": "P007",
+      "task": "Approve most suitable institutes to conduct exams",
+      "rDate": "2024/02/26",
+      "role": "DGM",
+      "link": "/dgm/#"
+    },
+    {
+      "id": "P008",
+      "task": "Approve exam result sheet",
+      "rDate": "2024/02/26",
+      "role": "DGM",
+      "link": "/dgm/results"
+    },
+    {
+      "id": "P009",
+      "task": "Approve/ Reject  new program requests",
+      "rDate": "2024/02/26",
+      "role": "DGM",
+      "link": "/dgm/#"
+    },
+    {
+      "id": "P010",
+      "task": "Approve allowances of In-Plant trainings",
+      "rDate": "2024/02/26",
+      "role": "DGM",
+      "link": "/dgm/allowance"
+    }
+  ],
+  "programs": [
+    {
+      "id": "P001",
+      "type": "Training",
+      "name": "Training 001",
+      "targetGroup": "Clerks",
+      "project_manager": "Ravindu Viranga",
+      "status": "approved",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Piliyandala"
+    },
+    {
+      "id": "P002",
+      "type": "Examination",
+      "name": "Exam 001",
+      "targetGroup": "Clerks",
+      "project_manager": "Jonny Depp",
+      "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Piliyandala"
+    },
+    {
+      "id": "P003",
+      "type": "Training",
+      "name": "Training 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Castlereigh"
+    },
+    {
+      "id": "P004",
+      "type": "Examination",
+      "name": "Exam 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "rejected",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Castlereigh"
+    },
+    {
+      "id": "P005",
+      "type": "Training",
+      "name": "Training 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "pending",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Kalawana"
+    },
+    {
+      "id": "P006",
+      "type": "Examination",
+      "name": "Exam 002",
+      "targetGroup": "Clerks",
+      "project_manager": "Jone Doe",
+      "status": "rejected",
+      "sDate": "2024/03/15",
+      "eDate": "2024/03/18",
+      "seating_capacity": 50,
+      "centre": "Kinchigune"
+    }
+  ],
+  "participantListApproval": [],
+  "resultApproval": [
+    {
+      "id": "739",
+      "programId": "P001",
+      "isApproved": true
+    }
+  ],
+  "allowanceApproval": [],
+  "allowances": [
+    {
+      "id": "P001",
+      "name": "Training 001",
+      "participants": [
+        {
+          "id": 1,
+          "fullName": "viranga",
+          "jobRole": "Clerk",
+          "date_joined": "2009/08/21",
+          "email": "viranga@gmail.com",
+          "contact_number": "0768452655",
+          "allowance": 10000
+        },
+        {
+          "id": 2,
+          "fullName": "viranga",
+          "jobRole": "Clerk",
+          "date_joined": "2009/08/21",
+          "email": "viranga@gmail.com",
+          "contact_number": "0768452655",
+          "allowance": 10000
+        }
+      ]
+    },
+    {
+      "id": "P002",
+      "name": "Training 002",
+      "participants": [
+        {
+          "id": 1,
+          "fullName": "John Doe",
+          "jobRole": "Manager",
+          "date_joined": "2010/05/15",
+          "email": "john.doe@example.com",
+          "contact_number": "0712345678",
+          "allowance": 12000
+        },
+        {
+          "id": 2,
+          "fullName": "Jane Smith",
+          "jobRole": "Assistant",
+          "date_joined": "2011/02/20",
+          "email": "jane.smith@example.com",
+          "contact_number": "0776543210",
+          "allowance": 11000
+        }
+      ]
+    },
+    {
+      "id": "P003",
+      "name": "Training 003",
+      "participants": [
+        {
+          "id": 1,
+          "fullName": "Alice Johnson",
+          "jobRole": "Coordinator",
+          "date_joined": "2012/09/18",
+          "email": "alice.johnson@example.com",
+          "contact_number": "0755555555",
+          "allowance": 15000
+        },
+        {
+          "id": 2,
+          "fullName": "Bob Brown",
+          "jobRole": "Technician",
+          "date_joined": "2013/07/10",
+          "email": "bob.brown@example.com",
+          "contact_number": "0788888888",
+          "allowance": 13000
+        }
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "name": "Piliyandala",
+      "id": "1",
+      "hostels": [
+        {
+          "hostelId": "1.1",
+          "name": "Hostel A",
+          "buildings": [
+            {
+              "name": "Building 1",
+              "rooms": [
+                {
+                  "number": "101",
+                  "capacity": 2,
+                  "status": false,
+                  "comments": "here comes the comments"
+                },
+                {
+                  "number": "102",
+                  "capacity": 3,
+                  "status": false,
+                  "comments": "here comes the comments"
+                }
+              ]
+            },
+            {
+              "name": "Building 2",
+              "rooms": [
+                {
+                  "number": "201",
+                  "capacity": 4,
+                  "status": false,
+                  "comments": "here comes the comments"
+                },
+                {
+                  "number": "202",
+                  "capacity": 3,
+                  "status": false,
+                  "comments": "here comes the comments"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hostelId": "1.2",
+          "name": "Hostel B",
+          "buildings": [
+            {
+              "name": "Building 3",
+              "rooms": [
+                {
+                  "number": "301",
+                  "capacity": 2,
+                  "status": false,
+                  "comments": "here comes the comments"
+                },
+                {
+                  "number": "302",
+                  "capacity": 3,
+                  "status": false,
+                  "comments": "here comes the comments"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Castlereigh",
+      "id": "2",
+      "hostels": [
+        {
+          "hostelId": "2.1",
+          "name": "Hostel C",
+          "buildings": [
+            {
+              "name": "Building 4",
+              "rooms": [
+                {
+                  "number": "401",
+                  "capacity": 2,
+                  "status": false,
+                  "comments": "here comes the comments"
+                },
+                {
+                  "number": "402",
+                  "capacity": 3,
+                  "status": false,
+                  "comments": "here comes the commentss"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kinchigune",
+      "id": "3",
+      "hostels": [
+        {
+          "hostelId": "3.1",
+          "name": "Hostel D",
+          "buildings": [
+            {
+              "name": "Building 5",
+              "rooms": [
+                {
+                  "number": "501",
+                  "capacity": 2,
+                  "status": false,
+                  "comments": "here comes the comments"
+                },
+                {
+                  "number": "502",
+                  "capacity": 3,
+                  "status": false,
+                  "comments": "here comes the comments"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kalawana",
+      "id": "4",
+      "hostels": [
+        {
+          "hostelId": "4.1",
+          "name": "Hostel E",
+          "buildings": [
+            {
+              "name": "Building 6",
+              "rooms": [
+                {
+                  "number": "601",
+                  "capacity": 2,
+                  "status": false,
+                  "comments": "here comes the comments"
+                },
+                {
+                  "number": "602",
+                  "capacity": 3,
+                  "status": false,
+                  "comments": "here comes the comments"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
