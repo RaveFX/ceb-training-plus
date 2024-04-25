@@ -15,6 +15,7 @@ import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-d
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProgramListToComponent } from './pages/program-list-to/program-list-to.component';
 
+import { AttendanceToComponent } from './pages/attendance-to/attendance-to.component';
 
 const routes: Routes = [
   {
@@ -106,6 +107,10 @@ const routes: Routes = [
         path: 'programlistto',
         component: ProgramListToComponent
       },
+      {
+        path: 'attendance',
+        component: AttendanceToComponent
+      }
     ]
   }
 ];

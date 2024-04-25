@@ -209,6 +209,7 @@ import { ImageModule } from 'primeng/image';
 import { ProgramListToComponent } from './pages/program-list-to/program-list-to.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ProgramListConfirmToComponent } from './pages/program-list-to/program-list-confirm-to/program-list-confirm-to.component';
+import { AttendanceToComponent } from './pages/attendance-to/attendance-to.component';
 
 @NgModule({
   declarations: [
@@ -232,6 +233,7 @@ import { ProgramListConfirmToComponent } from './pages/program-list-to/program-l
     ProfileComponent,
     ProgramListToComponent,
     ProgramListConfirmToComponent,
+    AttendanceToComponent
   ],
   imports: [
     BrowserModule,
