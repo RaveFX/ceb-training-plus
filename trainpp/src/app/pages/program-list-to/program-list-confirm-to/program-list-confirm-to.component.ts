@@ -1,15 +1,3 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-program-list-confirm-to',
-  templateUrl: './program-list-confirm-to.component.html',
-  styleUrl: './program-list-confirm-to.component.css'
-})
-export class ProgramListConfirmToComponent {
-
-}
-
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProgramService } from '../../../services/program.service';
@@ -18,11 +6,11 @@ import { PARTICIPANTS, Participant } from './data/participants';
 import { MessageService } from 'primeng/api';
 
 @Component({
-  selector: 'app-program-list-confirm-dgm',
-  templateUrl: './program-list-confirm-dgm.component.html',
-  styleUrl: './program-list-confirm-dgm.component.css',
+  selector: 'app-program-list-confirm-to',
+  templateUrl: './program-list-confirm-to.component.html',
+  styleUrl: './program-list-confirm-to.component.css'
 })
-export class ProgramListConfirmDgmComponent implements OnInit {
+export class ProgramListConfirmToComponent implements OnInit {
   program!: any;
   participants: Participant[] = PARTICIPANTS;
   visible: boolean = false;
