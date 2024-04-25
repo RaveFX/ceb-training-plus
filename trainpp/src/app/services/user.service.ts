@@ -14,4 +14,10 @@ export class UserService {
   getUserById(id: string):  Observable<User[]>{
     return this.http.get<User[]>(`${this.baseUrl}/users?id=${id}`);
   }
+
+  updateUser(userDetails: User): Observable<User> {
+    const url = `${this.baseUrl}/users/${userDetails.id}`;
+    return this.http.patch<User>(url, userDetails);
+  }
+  
 }

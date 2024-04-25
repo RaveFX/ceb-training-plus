@@ -38,6 +38,7 @@ export class LoginComponent {
           sessionStorage.setItem('name', response[0].fullName);
           sessionStorage.setItem('role', response[0].role);
           sessionStorage.setItem('id', response[0].id);
+          sessionStorage.setItem('proPic', response[0].proPic);
           if(response[0].role === 'DGM'){
             this.router.navigate(['/dgm']);
           }else if (response[0].role === 'TO'){

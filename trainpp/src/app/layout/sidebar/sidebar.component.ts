@@ -26,6 +26,7 @@ export class SidebarComponent implements OnInit {
   userName = sessionStorage.getItem('name');
   userEmail = sessionStorage.getItem('email');
   userRole = sessionStorage.getItem('role');
+  proPic = sessionStorage.getItem('proPic');
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = true;

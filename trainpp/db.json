@@ -1,18 +1,22 @@
 {
   "users": [
     {
-      "fullName": "viranga",
+      "fullName": "Viranga Jayarathne",
       "email": "viranga@gmail.com",
       "password": "1234",
       "role": "DGM",
-      "id": "1"
+      "id": "1",
+      "tpNo": "0778548564",
+      "proPic": "https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
     },
     {
-      "fullName": "ravindu",
+      "fullName": "Ravindu Balasooriya",
       "email": "ravindu@gmail.com",
       "password": "1234",
       "role": "TO",
-      "id": "2"
+      "id": "2",
+      "tpNo": "0778548563",
+      "proPic": "https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
     }
   ],
   "tasks": [
@@ -164,7 +168,7 @@
   "participantListApproval": [],
   "resultApproval": [
     {
-      "id": 739,
+      "id": "739",
       "programId": "P001",
       "isApproved": true
     }

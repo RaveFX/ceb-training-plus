@@ -169,6 +169,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownModule } from 'primeng/dropdown';
 import { MenuModule } from 'primeng/menu';
 import { PanelMenuModule } from 'primeng/panelmenu';
+import { FileUploadModule } from 'primeng/fileupload';
 import {
   heroCog,
   heroHome,
@@ -259,6 +260,7 @@ import { ProgramListConfirmToComponent } from './pages/program-list-to/program-l
     AccordionModule,
     ChipModule,
     ImageModule,
+    FileUploadModule,
     NgIconsModule.withIcons({
       heroCog,
       heroHome,
