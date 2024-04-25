@@ -13,6 +13,10 @@
     font-size: small;
   }
 
+  /* .hod-button {
+    background-color: yellow;
+  } */
+
   /* In your-component.component.css */
 .forward-button {
     padding: 6px 12px; /* Adjust padding for size */

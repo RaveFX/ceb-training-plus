@@ -210,6 +210,9 @@ import { ProgramListToComponent } from './pages/program-list-to/program-list-to.
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ProgramListConfirmToComponent } from './pages/program-list-to/program-list-confirm-to/program-list-confirm-to.component';
 import { AttendanceToComponent } from './pages/attendance-to/attendance-to.component';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+
 
 @NgModule({
   declarations: [
@@ -283,6 +286,10 @@ import { AttendanceToComponent } from './pages/attendance-to/attendance-to.compo
       heroBuildingOffice,
       heroTrash
     }),
+    NgIconsModule.withIcons({ heroCog, heroHome, heroClipboard, heroBriefcase, heroPencilSquare, heroXCircle}),
+    DialogModule,
+    InputTextareaModule,
+
   ],
   providers: [provideHttpClient(withFetch()),provideClientHydration(), MessageService],
   bootstrap: [AppComponent],
