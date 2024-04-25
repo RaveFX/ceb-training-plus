@@ -13,6 +13,8 @@ import { ApproveResultsDgmComponent } from './pages/approve-results-dgm/approve-
 import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/approve-allowance-dgm.component';
 import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ProgramListToComponent } from './pages/program-list-to/program-list-to.component';
+
 
 const routes: Routes = [
   {
@@ -99,7 +101,11 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent
-      }
+      },
+      {
+        path: 'programlistto',
+        component: ProgramListToComponent
+      },
     ]
   }
 ];

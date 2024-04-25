@@ -1,0 +1,15 @@
+/* Decrease button size */
+.p-button {
+    font-size: 12px;
+    padding: 5px 20px;
+    background-color: var(--darkAsh);
+  }
+
+  .p-button-label {
+    font-size: 12px;
+  }
+  
+  * {
+    font-size: small;
+  }
+  
