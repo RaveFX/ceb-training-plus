@@ -17,6 +17,15 @@
       "id": "2",
       "tpNo": "0778548563",
       "proPic": "https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+    },
+    {
+      "fullName": "Anushka Rajapaksha",
+      "email": "anushka@gmail.com",
+      "password": "1234",
+      "role": "ADMIN",
+      "id": "3",
+      "tpNo": "0772711981",
+      "proPic": "https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
     }
   ],
   "tasks": [
