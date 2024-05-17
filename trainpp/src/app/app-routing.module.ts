@@ -106,6 +106,17 @@ const routes: Routes = [
         component: AttendanceToComponent
       }
     ]
+  },
+  {
+    path: 'admin',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+    ]
   }
 ];
 

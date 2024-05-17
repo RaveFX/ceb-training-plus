@@ -43,6 +43,8 @@ export class LoginComponent {
             this.router.navigate(['/dgm']);
           }else if (response[0].role === 'TO'){
             this.router.navigate(['/to']);
+          }else if (response[0].role === 'ADMIN'){
+            this.router.navigate(['/admin']);
           }
         } else {
           this.msgService.add({
