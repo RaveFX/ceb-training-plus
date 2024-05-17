@@ -207,6 +207,7 @@ import { ChipModule } from 'primeng/chip';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ImageModule } from 'primeng/image';
 import { AttendanceToComponent } from './pages/attendance-to/attendance-to.component';
+import { AttendanceListComponent } from './pages/attendace-to/attendance-list/attendance-list.component';
 
 @NgModule({
   declarations: [
@@ -229,6 +230,7 @@ import { AttendanceToComponent } from './pages/attendance-to/attendance-to.compo
     ApproveAllowanceDgmComponent,
     ProfileComponent,
     AttendanceToComponent,
+    AttendanceListComponent,
   ],
   imports: [
     BrowserModule,
