@@ -188,7 +188,8 @@ import {
   heroBuildingOffice2,
   heroNoSymbol,
   heroBuildingOffice,
-  heroTrash
+  heroTrash,
+  heroUsers
 } from '@ng-icons/heroicons/outline';
 import { NgIconsModule } from '@ng-icons/core';
 import { SublevelMenuComponent } from './layout/sidebar/sublevel-menu.component';
@@ -208,6 +209,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ImageModule } from 'primeng/image';
 import { AttendanceToComponent } from './pages/attendance-to/attendance-to.component';
 import { AttendanceListComponent } from './pages/attendace-to/attendance-list/attendance-list.component';
+import { AddUserComponent } from './pages/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -231,6 +233,7 @@ import { AttendanceListComponent } from './pages/attendace-to/attendance-list/at
     ProfileComponent,
     AttendanceToComponent,
     AttendanceListComponent,
+    AddUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -278,7 +281,8 @@ import { AttendanceListComponent } from './pages/attendace-to/attendance-list/at
       heroBuildingOffice2,
       heroNoSymbol,
       heroBuildingOffice,
-      heroTrash
+      heroTrash,
+      heroUsers
     }),
   ],
   providers: [provideClientHydration(), MessageService],

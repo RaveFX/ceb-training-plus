@@ -14,6 +14,7 @@ import { ApproveAllowanceDgmComponent } from './pages/approve-allowance-dgm/appr
 import { BlockHostelDgmComponent } from './pages/block-hostel-dgm/block-hostel-dgm.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AttendanceToComponent } from './pages/attendance-to/attendance-to.component';
+import { AddUserComponent } from './pages/add-user/add-user.component';
 
 const routes: Routes = [
   {
@@ -115,6 +116,14 @@ const routes: Routes = [
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+        path: 'users',
+        component: AddUserComponent
       },
     ]
   }

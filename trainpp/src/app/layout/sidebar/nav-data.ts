@@ -105,3 +105,18 @@ export const dgm_sidebarData: ISidebarData[] = [
     },
 
 ];
+
+//ADMIN
+export const admin_sidebarData: ISidebarData[] = [
+    {
+        label: 'Dashboard',
+        icon: 'heroCog',
+        routeLink: '/admin/home'
+    },
+    {
+        label: 'Users',
+        icon: 'heroUsers',
+        routeLink: '/admin/users'
+    }
+
+];

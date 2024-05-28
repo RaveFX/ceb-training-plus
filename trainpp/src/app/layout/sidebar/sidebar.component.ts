@@ -5,7 +5,7 @@ import {
   HostListener,
   OnInit,
 } from '@angular/core';
-import { to_sidebarData, dgm_sidebarData } from './nav-data';
+import { to_sidebarData, dgm_sidebarData, admin_sidebarData } from './nav-data';
 import { ISidebarData } from './helper';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
@@ -76,8 +76,8 @@ export class SidebarComponent implements OnInit {
       this.navData = to_sidebarData;
     } else if (this.userRole === 'DGM') {
       this.navData = dgm_sidebarData;
-    } else {
-      this.navData = to_sidebarData;
+    } else if (this.userRole === 'ADMIN') {
+      this.navData = admin_sidebarData;
     }
   }
 
